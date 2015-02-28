@@ -1,0 +1,1 @@
+<div class="warning info"><div class="binner">$content</div></div>

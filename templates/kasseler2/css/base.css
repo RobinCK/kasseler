@@ -1,0 +1,48 @@
+.base{padding-bottom:7px}
+.basepub{padding-bottom:0}
+.binner{padding:0 7px}
+#mainbox .binner{padding-left:15px;padding-right:15px}
+.heading{background:transparent url("../images/dotted.gif") repeat-x left bottom}
+.heading .binner{padding-bottom:7px}
+.heading img.moduleicon{float:left;width:48px;height:48px;margin-right:7px}
+.morefadmin{text-align:right;background:transparent url("../images/morefadmin.png") repeat-x left top}
+.morefadmin .binner{padding-bottom:3px;background:transparent url("../images/dotted.gif") repeat-x left bottom}
+.morefadmin,.morefadmin a{color:#494949}
+.morefadmin a:hover{text-decoration:none;color:#2f73a3}
+.modmenu{text-align:left;background:transparent url("../images/morefadmin.png") repeat-x left top}
+.modmenu .binner{padding-bottom:4px;padding-top:4px;padding-left:0!important;background:transparent url("../images/dotted.gif") repeat-x left bottom}
+.heading h1{font-size:14px;font-weight:bold;color:#2689cf;font-family:Arial,Tahoma,Sans-serif;padding-top:5px}
+span.arg{padding-right:9px;float:left}
+span.arg img.left{margin:2px 3px 0 0}
+span.argr{float:right;padding-left:6px}
+.maincont{padding:5px 0 5px 0}
+.tableforms{width:100%}
+.tableforms .tableforms_tr{vertical-align:top;background:transparent url("../images/line.gif") repeat-x left bottom}
+.tableforms tr td{padding:5px}
+.fieldinfo{text-align:right;color:#4f738c;width:200px}
+.text_field,.textarea_field{padding:2px}
+.tableforms .text_field,.tableforms .textarea_field{width:97%}
+.basepub .heading{background:#539ed1 url("../images/basepub_heading.png") repeat-x left top}
+.basepub .heading .binner{padding-bottom:5px;padding-top:4px}
+.basepub .heading h1{font-weight:bold;color:#fff;font-size:11px;font-family:Tahoma,Verdana,Helvetica,sans-serif;text-transform:uppercase}
+.basepub .heading h1 a{color:#fff}
+.basepub .moreinfo{font-size:.8em;color:#fff}
+.basepub .moreinfo a{color:#fff;text-decoration:underline}
+.basepub .moreinfo a:hover{text-decoration:none}
+.basepub .maincont{border-top:2px solid #dbdbdb}
+.ratebase{margin-top:5px;float:right;width:85px;height:17px}
+.morelink .binner{padding-top:6px}
+.basenumbers{background:transparent url("../images/baselinebg.png") repeat-x left top}
+.commentbase{border-top:1px solid #e1e7ec;border-bottom:1px solid #e1e7ec;background:#fff}
+.commentinner{padding:10px 0}
+.heading h2{font-size:18px}
+.commentinfo div{padding:2px 0;width:100px;text-align:center;border-bottom:1px solid #e1e7ec}
+.commentinfo div{font-size:.9em}
+.signature{padding-top:13px;margin:0;font-size:.9em;color:#a4a4a4}
+.signature a{color:#a4a4a4}
+.commentbase .morelink{padding:15px 0 7px 0}
+.commentbase .moreinfo{font-size:.9em;color:#a4a4a4}
+.commentbase .heading{padding:0 0 7px 0}
+span.hello_user{color:#fff;font-weight:bold;font-family:Arial,Tahoma,Sans-serif}
+span.hello_user a{color:#fff;font-weight:bold;font-family:Arial,Tahoma,Sans-serif}
+span.hello_user a:hover{color:#fff;font-weight:bold;font-family:Arial,Tahoma,Sans-serif}

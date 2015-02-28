@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>{#kasseler_dlg.title}</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/dialog.js"></script>
+	<style type="text/css" media="screen">
+		input {
+			vertical-align: middle;
+		}
+		label {
+			vertical-align: middle;
+		}
+		fieldset {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+<form onsubmit="SyntaxHLDialog.insert(); return false;" action="#">
+	<fieldset id="syntaxhl_options">
+		<label for="syntaxhl_language">{#kasseler_dlg.choose_lang}:</label>
+		<select name="syntaxhl_language" id="syntaxhl_language">
+			<option value="php">PHP</option>
+			<option value="javascript">Javascript</option>
+			<option value="css">CSS</option>
+			<option value="html">HTML/XHTML</option>
+			<option value="ruby">Ruby</option>
+			<option value="sql">SQL</option>
+			<option value="code">Plain(Text)</option>
+			<option value="delphi">Delphi</option>
+			<option value="java">Java</option>
+			<option value="python">Python</option>
+			<option value="xml">XML</option>
+			<option value="cpp">C++</option>
+		</select>
+	</fieldset>
+	<fieldset>
+		<legend>{#kasseler_dlg.paste}</legend>
+	<textarea name="syntaxhl_code" id="syntaxhl_code" rows="15" cols="100" style="width: 100%; height: 100%; font-family: 'Courier New',Courier,mono; font-size: 12px;" class="mceFocus"></textarea>
+	</fieldset>
+	<div class="mceActionPanel">
+		<div style="float: left">
+			<input type="submit" id="insert" name="insert" value="{#insert}" />
+		</div>
+		<div style="float: right">
+			<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+		</div>
+	</div>
+   <script type="text/javascript">
+   //<![CDATA[
+function $$(element) {return (typeof element === "string") ? document.getElementById(element):element;}
+window.onload= function () {
+$$('syntaxhl_language').value=tinyMCEPopup.getWindowArg('typecode');
+$$('syntaxhl_code').value=tinyMCEPopup.getWindowArg('data');
+ };
+
+   //]]>
+   </script>
+</form>
+</body>
+</html>

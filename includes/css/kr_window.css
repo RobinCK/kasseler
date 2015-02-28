@@ -1,0 +1,24 @@
+.kaswindow {text-align: left;} /*РАЗМЕР ОКНА*/
+.kwborder {margin: 0 1px;}
+.kwborder {display: block; height: 1px; background-color: #585858; overflow: hidden; font-size:1px;}
+.kwheading {height: 28px; border-left: 1px solid #585858; border-right: 1px solid #585858; background: #7a7a7a url("../images/templates/kasseler/kas_window.png") repeat-x left -22px; overflow: hidden; position: relative; line-height: 25px; color: #f2f2f2;}
+.kwbase {background-color: #dedede; padding: 2px; border-left: 1px solid #585858; border-right: 1px solid #585858;}
+.kwbaseinn {background: #ffffff url("../images/templates/kasseler/kas_window.png") repeat-x left -109px; border: 1px solid #9b9b9b; padding: 8px;}
+/*Elements*/
+.kwheading strong img {float: left; width: 21px; height: 21px; position: relative; top: 3px; margin-right: 5px; margin-left: 5px; background: transparent url("../images/templates/kasseler/kas_window.png") no-repeat 0 0;}
+.kwheading span {position: absolute; top: 4px; right: 5px;}
+.kwheading span a, .kwheading span a img { width: 19px; height: 19px; display: block; }
+.kwheading span a {float: right;}
+a.close img {background: transparent url("../images/templates/kasseler/kas_window.png") no-repeat -21px -51px;}
+a.fullscreen img {background: transparent url("../images/templates/kasseler/kas_window.png") no-repeat 0 -89px;}
+a.svern img {background: transparent url("../images/templates/kasseler/kas_window.png") no-repeat 0 -51px;}
+a.close:hover img {background: transparent url("../images/templates/kasseler/kas_window.png") no-repeat -21px -70px;}
+a.svern:hover img {background: transparent url("../images/templates/kasseler/kas_window.png") no-repeat 0 -70px;}
+a.fullscreen:hover img {background: transparent url("../images/templates/kasseler/kas_window.png") no-repeat -21px -89px;}
+
+/*Кнопки*/
+.kr_window .button {background: url(../images/templates/kasseler/button.gif) top center no-repeat; display:block; width:75px; height:21px; line-height: 21px; color: #717171; font-weight: bold;  font-size: 11px; font-family: Tahoma, Verdana, Helvetica, sans-serif; text-decoration:none; text-align: center;}
+.kr_window .button:hover {background: url(../images/templates/kasseler/button.gif) bottom center no-repeat; color: #3D6594; text-decoration:none;}
+
+.active {}
+.noactive {color: #888888;}

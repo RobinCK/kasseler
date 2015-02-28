@@ -1,0 +1,70 @@
+.mce_ks_cite{background: url("../images/editor/cite.png") repeat-x scroll left top transparent !important;}
+.mce_ks_smile{background: url("../images/editor/smiles.png") repeat-x scroll left top transparent !important;}
+.mce_ks_spoiler{background: url("../images/editor/spoiler.png") repeat-x scroll left top transparent !important;}
+.mce_ks_translit{background: url("../images/editor/translit.png") repeat-x scroll left top transparent !important;}
+.mce_ks_code{background: url("../images/editor/code.png") repeat-x scroll left top transparent !important;}
+.mce_ks_font{background: url("../images/editor/font.png") repeat-x scroll left top transparent !important;}
+.mce_ks_font,.mce_ks_size{width:50px !important;}
+.mce_ks_size{background: url("../images/editor/size.png") repeat-x scroll left top transparent !important;}
+.kscode .number {color: #5C5C5C !important;width:10px;}
+.kscode .content {border-left: 3px solid #6CE26C !important;color: #000000 !important;}
+.mce_bold{background: url("../images/editor/b.png") repeat-x scroll left top transparent !important;}
+.mce_italic{background: url("../images/editor/i.png") repeat-x scroll left top transparent !important;}
+.mce_underline{background: url("../images/editor/u.png") repeat-x scroll left top transparent !important;}
+.mce_strikethrough{background: url("../images/editor/s.png") repeat-x scroll left top transparent !important;}
+.mce_justifyleft{background: url("../images/editor/left.png") repeat-x scroll left top transparent !important;}
+.mce_justifycenter{background: url("../images/editor/center.png") repeat-x scroll left top transparent !important;}
+.mce_justifyright{background: url("../images/editor/right.png") repeat-x scroll left top transparent !important;}
+.mce_justifyfull{background: url("../images/editor/justify.png") repeat-x scroll left top transparent !important;}
+.mce_image{background: url("../images/editor/img.png") repeat-x scroll left top transparent !important;}
+.mce_link{background: url("../images/editor/link.png") repeat-x scroll left top transparent !important;}
+.mce_preview{background: url("../images/editor/preview.png") repeat-x scroll left top transparent !important;}
+.mce_charmap{background: url("../images/editor/charset.png") repeat-x scroll left top transparent !important;}
+.mce_bullist{background: url("../images/editor/li.png") repeat-x scroll left top transparent !important;}
+.mce_numlist{background: url("../images/editor/list_ordered.png") repeat-x scroll left top transparent !important;}
+.mce_indent{background: url("../images/editor/blockquote.png") repeat-x scroll left top transparent !important;}
+.mce_sub{background: url("../images/editor/sub.png") repeat-x scroll left top transparent !important;}
+.mce_sup{background: url("../images/editor/sup.png") repeat-x scroll left top transparent !important;}
+table.mce_forecolor tr td:first-child,table.mce_backcolor tr td:first-child {display: none;}
+.mce_forecolor,.mce_.mce_forecolor{background: url("") repeat-x scroll left top transparent !important;}
+.defaultSkin .mceSplitButton a.mceAction,.defaultSkin .mceSplitButton a.mceOpen {border-width: 0 !important;}
+.defaultSkin .mceSplitButton a.mceOpen{width: 20px !important;}
+.mceColorPreview{height: 0px !important;}
+table.mce_forecolor{width: 20px !important;}
+table.mce_forecolor a{background: url("../images/editor/color.png") no-repeat scroll left top transparent !important; width: 20px !important;}
+table.mce_backcolor{width: 20px !important;}
+table.mce_backcolor a{background: url("../images/editor/backcolor.png") no-repeat scroll left top transparent !important; width: 20px !important;}
+table.mce_backcolor a:hover,table.mce_forecolor a:hover{background-position: left bottom !important;}
+
+/**/
+.kse_ks_cite{background: url("../images/editor/cite.png") no-repeat scroll left top transparent !important;}
+.kse_ks_smile{background: url("../images/editor/smiles.png") no-repeat scroll left top transparent !important;}
+.kse_ks_spoiler{background: url("../images/editor/spoiler.png") no-repeat scroll left top transparent !important;}
+.kse_ks_translit{background: url("../images/editor/translit.png") no-repeat scroll left top transparent !important;}
+.kse_ks_code{background: url("../images/editor/code.png") no-repeat scroll left top transparent !important;}
+.kse_ks_font{background: url("../images/editor/font.png") no-repeat scroll left top transparent !important;padding-left: 51px !important;}
+.kse_ks_size{background: url("../images/editor/size.png") no-repeat scroll left top transparent !important;padding-left: 51px !important;}
+.kse_bold{background: url("../images/editor/b.png") no-repeat scroll left top transparent !important;}
+.kse_italic{background: url("../images/editor/i.png") no-repeat scroll left top transparent !important;}
+.kse_underline{background: url("../images/editor/u.png") no-repeat scroll left top transparent !important;}
+.kse_strikethrough{background: url("../images/editor/s.png") no-repeat scroll left top transparent !important;}
+.kse_justifyleft{background: url("../images/editor/left.png") no-repeat scroll left top transparent !important;}
+.kse_justifycenter{background: url("../images/editor/center.png") no-repeat scroll left top transparent !important;}
+.kse_justifyright{background: url("../images/editor/right.png") no-repeat scroll left top transparent !important;}
+.kse_justifyfull{background: url("../images/editor/justify.png") no-repeat scroll left top transparent !important;}
+.kse_image{background: url("../images/editor/img.png") no-repeat scroll left top transparent !important;}
+.kse_link{background: url("../images/editor/link.png") no-repeat scroll left top transparent !important;}
+.kse_preview{background: url("../images/editor/preview.png") no-repeat scroll left top transparent !important;}
+.kse_charmap{background: url("../images/editor/charset.png") no-repeat scroll left top transparent !important;}
+.kse_bullist{background: url("../images/editor/li.png") no-repeat scroll left top transparent !important;}
+.kse_numlist{background: url("../images/editor/list_ordered.png") no-repeat scroll left top transparent !important;}
+.kse_indent{background: url("../images/editor/blockquote.png") no-repeat scroll left top transparent !important;}
+.kse_sub{background: url("../images/editor/sub.png") no-repeat scroll left top transparent !important;}
+.kse_sup{background: url("../images/editor/sup.png") no-repeat scroll left top transparent !important;}
+.kse_forecolor{background: url("../images/editor/color.png") no-repeat scroll left top transparent !important; }
+.kse_backcolor{background: url("../images/editor/backcolor.png") no-repeat scroll left top transparent !important;}
+code {color: #969696;}
+.defaultSkin a.mceButtonEnabled:hover span{background-position: left bottom !important;}
+.defaultSkin a.mceButtonEnabled:hover{border:1px solid transparent !important;}
+.defaultSkin a.mceButtonActive span, .defaultSkin a.mceButtonSelected span{background-position: left bottom !important;}
+.defaultSkin a.mceButtonActive span, .defaultSkin a.mceButtonSelected span{border:0px solid transparent !important;background-color:transparent !important;}

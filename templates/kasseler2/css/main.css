@@ -1,0 +1,67 @@
+a{color:#3a94d4;text-decoration:none;outline:0}
+a:hover{text-decoration:underline}
+html,body,div,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,input{margin:0;padding:0}
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,strong,table,font{font-size:1em;font-style:normal;font-weight:normal}
+h1,h2,h3,h4,h5,h6{font: 12px/16px Arial, Helvetica, sans-serif; margin:0 0 .2em 0;line-height:1.1em;font-weight:bold}
+input,textarea,select{font-size:1.1em;font: 12px/16px Arial, Helvetica, sans-serif;}
+body{color:#5c5c5c;background-color:#fff;font-family:Tahoma,Arial,Verdana,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;line-height:18px}
+.page_bg{text-align:center;background-color:#f5f5f5}
+p{margin-bottom:18px}
+.clr{clear:both}
+img{border:0 none}
+img.left{float:left;margin:2px 20px 16px 0}
+img.right{float:right;margin:2px 0 16px 20px}
+hr{border:0;border-top:1px solid #cfcfcf}
+strong{font-weight:bold}
+table{border-collapse:collapse;border-spacing:0;border:0}
+ul{margin:2px 0;padding:0 0 0 5px}
+ul li{margin:5px 0;padding:0 0 0 14px;list-style-type:none}
+ol{list-style-image:none;list-style-position:outside;list-style-type:decimal;margin-bottom:18px;margin-left:2.2em}
+fieldset{border:1px solid #aaa}
+.wrapper{margin:auto;width:990px;text-align:left;padding-top:15px;padding-bottom:15px}
+.kasseler-cms{float:left;position:relative;top:8px}
+.headicons{float:right;position:relative;top:12px}
+.dleft,.dright{background-position:left;background-repeat:repeat-y;background-color:transparent}
+.dright{background-position:right}
+#toptop,#toptop .dleft,#toptop .dright{height:38px}
+#toptop{background:#666 url("../images/ks_headtop.png") repeat-x -2px 0}
+#toptop .dright{padding-right:23px;background:transparent url("../images/ks_headtop_rl.png") repeat-y right -143px}
+#toptop .dleft{padding-left:33px;background:transparent url("../images/ks_headtop_rl.png") repeat-y left 0}
+#tophead,#tophead .dleft,#tophead .dright{height:105px}
+#tophead{background:#f8f8f8 url("../images/ks_headtop.png") repeat-x -2px -38px;position:relative}
+#tophead .dright{padding-right:23px;background:transparent url("../images/ks_headtop_rl.png") repeat-y right -181px}
+#tophead .dleft{padding-left:32px;background:transparent url("../images/ks_headtop_rl.png") repeat-y left -38px}
+#menuhead2,#menuhead2 .dleft,#menuhead2 .dright{height:41px}
+#menuhead2{background:#444 url("../images/menuhead2.png") repeat-x left -82px}
+#menuhead2 .dright{padding-right:12px;background:transparent url("../images/menuhead2.png") repeat-y right -41px}
+#menuhead2 .dleft{padding-left:14px;background:transparent url("../images/menuhead2.png") repeat-y left 0}
+#bodypage,#bodypage .dleft,#bodypage .dright{height:auto}
+#bodypage{background-color:#fff;background-image:url(../images/bodypage_bg.png);background-repeat:repeat-x;background-position:left top}
+#bodypage .dright{padding-right:13px;background-color:transparent;background-image:url("../images/bodypage_right.png");background-repeat:repeat-y;background-position:right top}
+#bodypage .dleft{padding-left:15px;background-color:transparent;background-image:url("../images/bodypage_left.png");background-repeat:repeat-y;background-position:left top}
+.container{padding-top:8px}
+#leftcol{width:212px;height:auto;padding:0 7px 0 0}
+#rightcol{width:212px;height:auto;padding:0 0 0 7px}
+#maincol{height:auto}
+#mainbox{height:auto}
+#footer,#footer .dleft,#footer .dright{height:39px}
+#footer{background:#4991c3 url("../images/ks_footer.png") repeat -3px 0}
+#footer .dright{padding-right:23px;background:transparent url("../images/ks_footer_rl.png") repeat-y right -39px}
+#footer .dleft{padding-left:33px;background:transparent url("../images/ks_footer_rl.png") repeat-y left 0}
+#footer_us,#footer_us .dleft,#footer_us .dright{height:59px}
+#footer_us{background:#4991c3 url("../images/user_footer.png") repeat -2px 0}
+#footer_us .dright{padding-right:23px;background:transparent url("../images/user_footer_rl.png") repeat-y right -59px}
+#footer_us .dleft{padding-left:33px;background:transparent url("../images/user_footer_rl.png") repeat-y left 0}
+.viewsite{text-transform:uppercase;font-size:.9em;color:#fff;padding-top:6px}
+.newversion{text-transform:uppercase;font-size:.9em;color:#fff;padding-top:6px;float:right;display:inline}
+.newversion img{float:left;margin-top:5px}
+.viewsite a,.newversion a{color:#fff}
+.topicons{padding-top:8px}
+.topicons a{float:left;margin-right:7px}
+.copyright{float:left;color:#fff;font-size:.9em;padding-top:12px;text-transform:uppercase}
+.copyright a{color:#fff}
+.infoicon{float:right;color:#a3a3a3;font-size:10px;padding-top:16px}
+div.count{float:right;display:inline;padding-top:16px}
+div.count span{display:block;float:left;height:31px;margin-right:2px}
+.centroarts{padding-top:5px;padding-right:30px;text-align:right;color:#a6a6a6;font-size:.9em}
+.centroarts a{color:#a6a6a6}

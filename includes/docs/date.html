@@ -1,0 +1,442 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Help date format</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, b, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+        font-family: "Helvetica";
+        color: #444;
+    }
+    ol, ul {list-style: none;}
+    blockquote, q {quotes: none;}
+    blockquote:before, blockquote:after,
+    q:before, q:after {content: ''; content: none;}
+    table {border-collapse: collapse; border-spacing: 0;}
+    th var {width: 100%; display: block; text-align: center;}
+    body{
+        background: #eeeeee;
+        background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#eeeeee));
+        background: -webkit-linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+        background: -o-linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+        background: -ms-linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+        background: linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 );
+    }
+    .content {
+        width: 800px; 
+        margin: 0 auto;
+        border: #eeeeee;
+        background: #fff;
+        padding: 5px;;
+    }
+    .content table {
+        border-collapse: collapse; border-spacing: 1;
+        border: 1px #eeeeee solid;
+    }
+    .content td{
+        padding: 5px;
+    }
+    thead th {
+        background: #D16964;
+        color: #fff;
+        padding: 8px;
+    }
+    th {
+        font-weight: bold;
+    }
+    a {color: #ff3019; text-decoration: none;}
+    .row1 {background: #fafafa;}
+    .row2 {background: #f5f5f5;}
+  </style>
+</head>
+
+<body>
+<div class='content'>
+<table border="1" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th class='tt' width='70'>
+                Символ
+            </th>
+            <th class='tt'>
+                Описание
+            </th>
+            <th class='tt' width='250'>
+                Пример
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class='row1'>
+            <th>
+                <p><var>a</var></p>
+            </th>
+            <td>
+                <p>Ante meridiem или Post meridiem в нижнем регистре</p>
+            </td>
+            <td>
+                <p><var>am</var>&nbsp;или&nbsp;<var>pm</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>A</var></p>
+            </th>
+            <td>
+                <p>Ante meridiem или Post meridiem в верхнем регистре</p>
+            </td>
+            <td>
+                <p><var>AM</var>&nbsp;или&nbsp;<var>PM</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>B</var></p>
+            </th>
+            <td>
+                <p>Время в стадарте Swatch Internet</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>000</var>&nbsp;до&nbsp;<var>999</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>c</var></p>
+            </th>
+            <td>
+                <p>Дата в формате ISO 8601 (добавлено в PHP 5)</p>
+            </td>
+            <td>
+                <p>2004-02-12T15:19:21+00:00</p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>d</var></p>
+            </th>
+            <td>
+                <p>День месяца, 2 цифры с ведущими нулями</p>
+            </td>
+            <td>
+                <p>от&nbsp;<var>01</var>&nbsp;до&nbsp;<var>31</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>D</var></p>
+            </th>
+            <td>
+                <p>Сокращенное наименование дня недели, 3 символа</p>
+            </td>
+            <td>
+                <p>от&nbsp;<var>Mon</var>&nbsp;до&nbsp;<var>Sun</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>F</var></p>
+            </th>
+            <td>
+                <p>Полное наименование месяца, например January или March</p>
+            </td>
+            <td>
+                <p>от&nbsp;<var>January</var>&nbsp;до&nbsp;<var>December</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>g</var></p>
+            </th>
+            <td>
+                <p>Часы в 12-часовом формате без ведущих нулей</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>1</var>&nbsp;до&nbsp;<var>12</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>G</var></p>
+            </th>
+            <td>
+                <p>Часы в 24-часовом формате без ведущих нулей</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>0</var>&nbsp;до&nbsp;<var>23</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>h</var></p>
+            </th>
+            <td>
+                <p>Часы в 12-часовом формате с ведущими нулями</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>01</var>&nbsp;до&nbsp;<var>12</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>H</var></p>
+            </th>
+            <td>
+                <p>Часы в 24-часовом формате с ведущими нулями</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>00</var>&nbsp;до&nbsp;<var>23</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>i</var></p>
+            </th>
+            <td>
+                <p>Минуты с ведущими нулями</p>
+            </td>
+            <td>
+                <p><var>00</var>&nbsp;to&nbsp;<var>59</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>j</var></p>
+            </th>
+            <td>
+                <p>День месяца без ведущих нулей</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>1</var>&nbsp;до&nbsp;<var>31</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>l</var></p>
+            </th>
+            <td>
+                <p>Полное наименование дня недели</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>Sunday</var>&nbsp;до&nbsp;<var>Saturday</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>L</var></p>
+            </th>
+            <td>
+                <p>Признак високосного года</p>
+            </td>
+            <td>
+                <p><var>1</var>, если год високосный, иначе&nbsp;<var>0</var>.</p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>m</var></p>
+            </th>
+            <td>
+                <p>Порядковый номер месяца с ведущими нулями</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>01</var>&nbsp;до&nbsp;<var>12</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>M</var></p>
+            </th>
+            <td>
+                <p>Сокращенное наименование месяца, 3 символа</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>Jan</var>&nbsp;до&nbsp;<var>Dec</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>n</var></p>
+            </th>
+            <td>
+                <p>Порядковый номер месяца без ведущих нулей</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>1</var>&nbsp;до&nbsp;<var>12</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>O</var></p>
+            </th>
+            <td>
+                <p>Разница с временем по Гринвичу в часах</p>
+            </td>
+            <td>
+                <p><var>+0200</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>r</var></p>
+            </th>
+            <td>
+                <p>Дата в формате&nbsp;<a href="http://www.faqs.org/rfcs/rfc2822" target="_top">RFC 2822</a></p>
+            </td>
+            <td>
+                <p><var>Thu, 21 Dec 2000 16:01:07 +0200</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>s</var></p>
+            </th>
+            <td>
+                <p>Секунды с ведущими нулями</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>00</var>&nbsp;до&nbsp;<var>59</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>S</var></p>
+            </th>
+            <td>
+                <p>Английский суффикс порядкового числительного дня.</p>
+            </td>
+            <td>
+                <p><var>st</var>,&nbsp;<var>nd</var>,&nbsp;<var>rd</var>&nbsp;или&nbsp;<var>th</var>.</p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>t</var></p>
+            </th>
+            <td>
+                <p>Количество дней в месяце.</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>28</var>&nbsp;до&nbsp;<var>31</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>T</var></p>
+            </th>
+            <td>
+                <p>Временная зона на сервере</p>
+            </td>
+            <td>
+                <p>Примеры:&nbsp;<var>EST</var>,&nbsp;<var>MDT</var>&nbsp;...</p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>U</var></p>
+            </th>
+            <td>
+                <p>Количество секунд, прошедших с начала Эпохи Unix</p>
+            </td>
+            <td>
+                <p>См. также&nbsp;<a href="http://php.su/functions/?time"><b>time()</b></a></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>w</var></p>
+            </th>
+            <td>
+                <p>Порядковый номер дня недели</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>0</var>&nbsp;(вс.) до&nbsp;<var>6</var>(сб.)</p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>W</var></p>
+            </th>
+            <td>
+                <p>Порядковый номер недели года по ISO-8601.</p>
+            </td>
+            <td>
+                <p>Например:&nbsp;<var>42</var>&nbsp;(42-я неделя года)</p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>Y</var></p>
+            </th>
+            <td>
+                <p>Порядковый номер года, 4 цифры</p>
+            </td>
+            <td>
+                <p>Примеры:&nbsp;<var>1999</var>,&nbsp;<var>2003</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>y</var></p>
+            </th>
+            <td>
+                <p>Номер года, 2 цифры</p>
+            </td>
+            <td>
+                <p>Примеры:&nbsp;<var>99</var>,&nbsp;<var>03</var></p>
+            </td>
+        </tr>
+        <tr class='row2'>
+            <th>
+                <p><var>z</var></p>
+            </th>
+            <td>
+                <p>Порядковый номер дня в году (нумерация с 0)</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>0</var>&nbsp;до&nbsp;<var>365</var></p>
+            </td>
+        </tr>
+        <tr class='row1'>
+            <th>
+                <p><var>Z</var></p>
+            </th>
+            <td>
+                <p>Смещение временной зоны в секундах. Для временных зон западнее UTC это отрицательное число, восточнее UTC - положительное.</p>
+            </td>
+            <td>
+                <p>От&nbsp;<var>-43200</var>&nbsp;до&nbsp;<var>43200</var></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

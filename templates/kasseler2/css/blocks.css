@@ -1,0 +1,67 @@
+#leftcol .blockmodule{margin-bottom:5px;width:212px}
+#leftcol .blockmodule .dtop{border:1px solid #3c3c3c;background:#494949 url("../images/leftblockmodule.png") repeat-x left top}
+#leftcol .blockmodule .dtop h3 a{color:#fff}
+#leftcol .blockmodule .dtop h3{padding:4px 10px;font-weight:bold;color:#fff;font-size:1em}
+#leftcol .blockmodule .dcont{border:1px solid #c2cad0;height:243px;background-color:white;overflow:auto}
+.modulecard a{display:block;border-bottom:1px solid #dee2e4;width:auto;height:60px;outline:0}
+.modulecard a:hover{background-color:#f6f6f6;text-decoration:none}
+.modulecard a span{display:block;padding:6px;line-height:14px}
+.modulecard a img{float:left;margin-right:5px}
+.modulecard a span i{font-style:normal;font-size:10px;color:#5c5c5c}
+#leftcol .block{margin-bottom:5px;width:212px;background:#fff url("../images/leftblock.png") repeat-y -212px top}
+#leftcol .block .dbottom{background:transparent url("../images/leftblock.png") no-repeat -424px bottom}
+#leftcol .block .dtop{background:#494949 url("../images/leftblock.png") no-repeat left top}
+#leftcol .block .dtop h3 a{color:#fff}
+#leftcol .block .dtop h3{padding:6px 10px 7px 10px;font-weight:bold;font-size:1em;color:#fff}
+#leftcol .block .dtop div h3{padding-left:33px}
+#leftcol .block .dcont{padding:6px 10px 15px 10px}
+#leftcol .block2{margin-bottom:5px;width:212px;background:#fcfcfc url("../images/leftblock2.png") repeat-y -212px top}
+#leftcol .block2 .dbottom{background:transparent url("../images/leftblock2.png") no-repeat -424px bottom}
+#leftcol .block2 .dtop{height:24px;background:#494949 url("../images/leftblock2.png") no-repeat left top}
+#leftcol .block2 .dtop h3 a{color:#fff}
+#leftcol .block2 .dtop h3{padding:6px 10px 7px 10px;font-weight:bold;color:#fff;font-size:.9em;text-transform:uppercase;margin:0}
+#leftcol .block2 .dcont{background:transparent url("../images/leftblock2.png") no-repeat -636px top;padding:6px 10px 15px 10px}
+#rightcol .block{margin-bottom:5px;width:212px;background:#fff url("../images/leftblock.png") repeat-y -212px top}
+#rightcol .block .dbottom{background:transparent url("../images/leftblock.png") no-repeat -424px bottom}
+#rightcol .block .dtop{background:#494949 url("../images/leftblock.png") no-repeat left top}
+#rightcol .block .dtop h3 a{color:#fff}
+#rightcol .block .dtop h3{padding:6px 10px 7px 10px;font-weight:bold;font-size:1em;color:#fff}
+#rightcol .block .dtop div h3{padding-left:33px}
+#rightcol .block .dcont{padding:6px 10px 15px 10px}
+#rightcol .block2{margin-bottom:5px;width:212px;background:#fcfcfc url("../images/leftblock2.png") repeat-y -212px top}
+#rightcol .block2 .dbottom{background:transparent url("../images/leftblock2.png") no-repeat -424px bottom}
+#rightcol .block2 .dtop{height:24px;background:#494949 url("../images/leftblock2.png") no-repeat left top}
+#rightcol .block2 .dtop h3 a{color:#fff}
+#rightcol .block2 .dtop h3{padding:6px 10px 7px 10px;font-weight:bold;color:#fff;font-size:.9em;text-transform:uppercase;margin:0}
+#rightcol .block2 .dcont{background:transparent url("../images/leftblock2.png") no-repeat -636px top;padding:6px 10px 15px 10px}
+#maincol .baseblock{margin-bottom:5px;background:#fcfcfc url("../images/baseblock.png") repeat-y -742px top}
+#maincol .iemargin{margin-bottom:5px}
+#maincol .baseblock .dbottom{background:transparent url("../images/baseblock.png") no-repeat -1484px bottom}
+#maincol .baseblock .dtop{background:transparent url("../images/baseblock.png") no-repeat 0 top}
+#maincol .baseblock .dcont{padding:7px 1px 0 1px}
+#maincol .centerblock{width:742px;margin-bottom:5px;background:#fff url("../images/centerblock.png") repeat-y -742px top}
+#maincol .centerblock .dbottom{background:transparent url("../images/centerblock.png") no-repeat -1484px bottom}
+#maincol .centerblock .dtop{height:28px;background:#e9e9e9 url("../images/centerblock.png") no-repeat 0 top}
+#maincol .centerblock .dtop h3 a{color:#717171}
+#maincol .centerblock .dtop h3{padding:8px 15px 0 15px;font-weight:bold;color:#717171;font-size:1em}
+#maincol .centerblock .dcont{padding:13px 15px 13px 15px}
+#mainbox #maincol .centerblock{width:522px;margin-bottom:5px;background:#fff url("../images/centerblock2.png") repeat-y -522px top}
+#mainbox #maincol .centerblock .dbottom{background:transparent url("../images/centerblock2.png") no-repeat -1044px bottom}
+#mainbox #maincol .centerblock .dtop{height:28px;background:#e9e9e9 url("../images/centerblock2.png") no-repeat 0 top}
+#mainbox #maincol .centerblock .dtop h3 a{color:#717171}
+#mainbox #maincol .centerblock .dtop h3{padding:8px 15px 0 15px;font-weight:bold;color:#717171;font-size:1em}
+#mainbox #maincol .centerblock .dcont{padding:13px 15px 13px 15px}
+.footblock{width:962px;background:#e6e6e6 url("../images/footblock.png") repeat-y -962px top}
+.footblock .dbottom{background:transparent url("../images/footblock.png") no-repeat -1924px bottom}
+.footblock .dtop{height:24px;background:#777 url("../images/footblock.png") no-repeat 0 top}
+.footblock .dtop h3 a{color:#fff}
+.footblock .dtop h3{padding:7px 15px 0 15px;font-weight:bold;color:#fff;font-size:.9em;text-transform:uppercase}
+.footblock .dcont{background:transparent url("../images/footblock.png") no-repeat -2886px top;padding:13px 15px 13px 15px}
+.leftarrow{margin-right:5px;margin-top:-2px;float:left;width:14px;height:14px}
+.leftarrow img{width:14px;height:14px}
+.leftarrow{background:transparent url("../images/leftarrow.gif") no-repeat left top}
+a.leftarrow:hover{background-position:left bottom}
+.rightarrow{margin-right:5px;margin-top:-2px;float:left;width:14px;height:14px}
+.rightarrow img{width:14px;height:14px}
+.rightarrow{background:transparent url("../images/rightarrow.gif") no-repeat left top}
+a.rightarrow:hover{background-position:left bottom}

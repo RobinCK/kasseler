@@ -1,0 +1,23 @@
+/*author: Rumin Sergey*/
+/*Copyright: CENTROARTS.com*/
+/*e-mail: gr-x@mail.ru, support@centroarts.com*/
+/*URL: http://www.centroarts.com*/
+
+/*-----MAIN-----*/
+.base { padding-bottom: 7px; }
+.binner { padding: 0 7px;}
+/*ЗАГОЛОВОК ЦЕНТРАЛЬНЫХ STORY*/
+.heading { background: transparent url("../images/dotted.gif") repeat-x left bottom; }
+.heading .binner { padding-bottom: 7px; }
+.heading img.moduleicon { float: left; width: 48px; height: 48px; margin-right: 7px; }
+.morefadmin { text-align: right; background: transparent url("../images/morefadmin.png") repeat-x left top; }
+.morefadmin .binner { padding-bottom: 3px; background: transparent url("../images/dotted.gif") repeat-x left bottom; }
+.morefadmin, .morefadmin a { color: #494949; }
+.morefadmin a:hover { text-decoration: none; color: #2f73a3; }
+.heading h1 {font-size: 14px; font-weight: bold; color: #2689cf; font-family: Arial, Tahoma, Sans-serif; padding-top: 5px;}
+/*ARGUMENTS*/
+span.arg { padding-right: 9px; float: left; }
+span.arg img.left { margin: 2px 3px 0 0; }
+span.argr { float: right; padding-left: 6px; }
+/*СОДЕРЖИМОЕ*/
+.maincont { padding: 5px 0 5px 0; }

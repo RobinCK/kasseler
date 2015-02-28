@@ -1,0 +1,45 @@
+.pm_date {color: #ababab; font-size: 0.8em;}
+.pm_row1 {background: #FFFFFF; border-bottom: 1px #e4e8ed solid;}
+.pm_row2 {background: #FAFAFA; border-bottom: 1px #e4e8ed solid;}
+.pm_row1:hover, .pm_row2:hover {
+    background: #edf1f5;
+    border-bottom: 1px #d0d8e1 solid;
+}
+
+.pm_row1, .pm_row2, .delte_pm a {
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -o-transition: background-color 1s;
+    -ms-transition: background-color 1s;
+    transition: background-color 1s;
+}
+.pm_message {border-bottom: 1px #e4e8ed solid;}
+.pm_message1 {background: #FFFFFF;}
+.pm_message2 {background: #FAFAFA;}
+.pm_message:hover {border-bottom: 1px #d0d8e1 solid;}
+.pm_message_sel {background: #edf1f5;}
+
+.sender_pm {width: 120px;}
+#pm_options {background: #F7F7F7; padding: 12px 4px 16px 8px; border-bottom: 1px #e4e8ed solid; z-index: 1;}
+input.search_pm {width: 100%; padding-left: 20px; position: relative; top: 1px;}
+.pm_search_icon {position: absolute; top:21px; left: 15px;}
+.search_close_button {padding-left: 30px;}
+.close_search {visibility: hidden;}
+.search_users_pm {display: none;}
+.highlight { background-color: #9D9E9E; color: #ffffff;}
+.autoloadclass {height: 0px; position: relative; left: -10000px;}
+.pm_text_l {color: #888888;}
+.delte_pm {display: none;}
+.delte_pm a {background-color: #e4eaf1; padding: 2px 3px;; position: relative; top: 8px; left: -6px; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;}
+.delte_pm a span {margin: 0;}
+.delte_pm a:hover {
+    background: #4189B8;
+    text-decoration: none;
+}
+.pm_create_table {background: #F7F7F7;}
+.pm_navi {position: relative;}
+.pm_navi span{position: absolute; right: 2px; top: 3px}
+.pm_navi a{text-decoration: none; color: #75B1D5;}
+.pm_navi a:hover{text-decoration: none; color: #67696A;}
+
+.pm_noread, .pm_msg_noread {background: #edf1f5;}

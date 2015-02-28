@@ -1,0 +1,41 @@
+.uninstall_button, .app_button, .clear_button, .insert_button, .info_button, .delete_button, .edit_button, .up_button, .down_button, .apply_button, .install_button {width: 16px; height: 16px; display: block; margin-left: 3px; float: left; text-decoration:none;}
+
+
+.delete_button {background: url('../images/delete.png') top left no-repeat; text-decoration:none;}
+.delete_button:hover {background: url('../images/delete.png') bottom no-repeat; text-decoration:none;}
+
+.uninstall_button {background: url('../images/uninstall.png') top left no-repeat; text-decoration:none;}
+.uninstall_button:hover {background: url('../images/uninstall.png') bottom no-repeat; text-decoration:none;}
+
+.edit_button {background: url('../images/edit.png') top left no-repeat; text-decoration:none;}
+.edit_button:hover {background: url('../images/edit.png') bottom no-repeat; text-decoration:none;}
+
+.up_button {background: url('../images/up.png') top left no-repeat; text-decoration:none;}
+.up_button:hover {background: url('../images/up.png') bottom no-repeat; text-decoration:none;}
+
+.down_button {background: url('../images/down.png') top left no-repeat; text-decoration:none;}
+.down_button:hover {background: url('../images/down.png') bottom no-repeat; text-decoration:none;}
+
+.apply_button {background: url('../images/apply.png') top left no-repeat; text-decoration:none;}
+.apply_button:hover {background: url('../images/apply.png') bottom no-repeat; text-decoration:none;}
+
+.info_button {background: url('../images/info.png') top left no-repeat; text-decoration:none;}
+.info_button:hover {background: url('../images/info.png') bottom no-repeat; text-decoration:none;}
+
+.install_button {background: url('../images/apply.png') top left no-repeat; text-decoration:none;}
+.install_button:hover {background: url('../images/apply.png') bottom no-repeat; text-decoration:none;}
+
+.insert_button {background: url('../images/insert.png') top left no-repeat; text-decoration:none;}
+.insert_button:hover {background: url('../images/insert.png') bottom no-repeat; text-decoration:none;}
+
+.clear_button {background: url('../images/clear.png') top left no-repeat; text-decoration:none;}
+.clear_button:hover {background: url('../images/clear.png') bottom no-repeat; text-decoration:none;}
+
+.app_button {background: url('../images/app.png') top left no-repeat; text-decoration:none;}
+.app_button:hover {background: url('../images/app.png') bottom no-repeat; text-decoration:none;}
+
+.cl {padding: 0px; background: none;}
+.cl td {padding: 0px; border: none;}
+
+.pointer {cursor: pointer;}
+.debbug_query {font-family: Courier New; font-size: 10px; color: #666666;}

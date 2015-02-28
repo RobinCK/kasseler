@@ -1,0 +1,67 @@
+<div id='wkrp_image' style='width: 500px;'>
+ <table cellspacing="0" cellpadding="0" border="0" style="background-color: rgb(247, 247, 247); border: 2px solid rgb(255, 255, 255); padding: 5px; width: 100%;">
+  <tr>
+   <td style="width: 130px;">{lang.img_align}:</td>
+   <td>
+    <select style="margin-right: 10px; width: 50%; " class="img_align">
+     <option value="none">none</option>
+     <option value="left">left</option>
+     <option value="right">right</option>
+     <option value="bottom">bottom</option>
+     <option selected="selected" value="middle">middle</option>
+     <option value="top">top</option>
+    </select>
+   </td>
+  </tr>
+  <tr>
+   <td>{lang.img_title}:</td>
+   <td>
+    <input type="text" style="width: 96%;" value="{lang.img_title}" class="img_title">
+   </td>
+  </tr>
+  <tr>
+   <td>{lang.img_url}:</td>
+   <td>
+    <input type="text" style="width: 96%;" value="http://yandex.st/www/1.584/yaru/i/logo.png" class="img_url">
+   </td>
+  </tr>
+  <tr>
+   <td>{lang.img_upload}:
+   </td>
+   <td>
+    <input type="file" name="imagefile" id="imagefile">
+    <select id='img_list' style="margin-right: 10px; width: 70%; float:left; " class="img_upload">
+     <option  selected="selected" value="none">&nbsp;</option>
+    </select>
+    <div class="ajax16" style="display: none;"></div>
+   </td>
+  </tr>
+ </table>
+</div>
+<div id='wkrp_link'  class='inputtext' style="width: 500px;">
+ <div class="title">{lang.Link}:</div><div class="input"><input type="text"></div>
+ <div class="title">{lang.text}:</div><div class="input"><textarea cols="20" rows="5"></textarea></div>
+</div>
+<div id='wkrp_hide' class='inputtext' style="width: 500px;">
+ <div class="title">{lang.spoiler_count}:</div><div class="input"><input type="text"></div>
+ <div class="title">{lang.text}:</div><div class="input"><textarea cols="20" rows="5"></textarea></div>
+</div>
+<div id='wkrp_code' class='inputtext' style="width: 700px;">
+ <div class="title">{lang.codeType}:</div><div class="input">  
+  <select style="margin-right: 10px; width: 50%; " class="img_align">
+   <option selected="selected" value="code">code</option>
+   <option value="php">php</option>
+   <option value="html">html</option>
+   <option value="css">css</option>
+   <option value="xml">xml</option>
+   <option value="javascript">javascript</option>
+   <option value="java">java</option>
+   <option value="cpp">cpp</option>
+   <option value="delphi">delphi</option>
+   <option value="python">python</option>
+   <option value="ruby">ruby</option>
+   <option value="sql">sql</option>
+  </select>
+ </div>
+ <div class="title">{lang.text}:</div><div class="input"><textarea cols="20" rows="10"></textarea></div>
+</div>

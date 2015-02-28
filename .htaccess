@@ -1,0 +1,78 @@
+#################################################
+## Kasseler CMS 2.x: Content Management System ##
+#################################################
+##                                             ##
+## Copyright (c)2007-2009 by Igor Ognichenko   ##
+## http://www.kasseler-cms.net/                ##
+#################################################
+
+#php_value max_input_time 600
+#php_value memory_limit 1400M
+#php_value post_max_size 800M
+#php_value upload_max_filesize 700M
+
+#AddDefaultCharset windows-1251
+DirectoryIndex index.php index.html index.htm
+
+ErrorDocument 400 /?http_error=400
+ErrorDocument 403 /?http_error=403
+ErrorDocument 404 /?http_error=404
+ErrorDocument 414 /?http_error=414
+ErrorDocument 500 /?http_error=500
+ErrorDocument 503 /?http_error=503
+
+#Options -Indexes
+#Options +FollowSymlinks
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  #XSS
+  RewriteCond %{QUERY_STRING} (\<|%3C).*script.*(\>|%3E) [NC,OR]
+  RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+  RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+  RewriteRule ^(.*)$ index.php [F,L]
+  
+  #tpl file no view
+  RedirectMatch (.*)\.tpl$  http://www.kasseler-cms.net/
+
+  RewriteRule ^@(.*)$ /index.php?module=account&do=user&id=$1 [L]
+  RewriteRule ^ref=([a-zA-Z0-9\.\-]+)$ /index.php?module=top_site&do=referer&id=$1 [L]
+
+  #RewriteCond  %{HTTPS}      !=on
+  #RewriteCond  %{HTTP_HOST}  kasseler-cms.net [OR]
+  #RewriteRule  ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI}
+  
+  RewriteCond %{REQUEST_URI} !^.+\.jpg|jpeg|gif|png|bmp|mp3|flv$ [NC,OR]
+  RewriteCond %{REQUEST_URI} ^.+\.php\.(.*){3,5}$ [NC]
+  RewriteRule ^uploads/(.*)$ engine.php?do=download&file=$1 [N]
+
+  RewriteRule ^index.html$ /index.php [L,QSA]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.php?mod_rewrite=$1 [L,QSA]
+</IfModule>
+
+<ifmodule mod_expires.c>
+  <filesmatch "\.(jpg|jpeg|bmp|gif|png|css|js)$">
+       ExpiresActive on
+       ExpiresDefault "access plus 1 year"
+   </filesmatch>
+</ifmodule>
+
+#Restrict access to files
+<Files "\.(inc|sql|back|cache|tpl|log|eml)$">
+    order allow,deny
+    deny from all
+</Files>
+
+#Allow access to certain ip
+#order allow deny
+#deny from all
+#allow from 127.0.0.1
+
+#Deny access to certain ip
+#order allow deny
+#deny from all
+#deny from 127.0.0.1>>>>>>> .r114

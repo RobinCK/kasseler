@@ -1,0 +1,26 @@
+/*author: Rumin Sergey*/
+/*author: Rumin Sergey*/
+/*Copyright: CENTROARTS.com*/
+/*e-mail: info@centroarts.com, centroarts@mail.ru*/
+/*URL: http://www.centroarts.com*/
+
+/*menuhead - Верхнее основное меню строка 1*/
+#menuhead span a, #menuhead span a b { float: left; height: 35px; outline:none;}
+#menuhead span a {text-align: center; color: #ffffff; text-decoration: none !important; background: transparent url("../images/ks_menulink.png") no-repeat left -100px;}
+#menuhead span a b {line-height: 35px; background: transparent url("../images/ks_menulink.png") no-repeat right -100px; cursor: pointer; padding: 0 15px 0 15px;}
+#menuhead span a:hover { background: #4199d6 url("../images/ks_menulink.png") no-repeat right -35px; }
+#menuhead span a:hover b { background: transparent url("../images/ks_menulink.png") no-repeat left 0; }
+#menuhead span a.ac { background: #4199d6 url("../images/ks_menulink.png") no-repeat right -35px; }
+#menuhead span a.ac b { background: transparent url("../images/ks_menulink.png") no-repeat left 0; }
+/*menuheadline - Верхнее дополнительное меню строка 2*/
+#menuheadline a { color: #ffffff; padding: 0 15px; }
+/*Кнопка помощи*/
+.help { float: right; padding-top: 8px; }
+.help a { font-size: 0.9em; color: #ffffff; }
+.help img { float: left; margin-top: 5px; color: #ffffff; }
+/*Кнопки в шапке*/
+.headiconadmin { float: right; padding-top: 5px; }
+.headiconadmin a {float: left; width: 107px; height: 81px; background: transparent url("../images/ks_headia_link.png") no-repeat left top; margin-left: 3px;}
+.headiconadmin a img {display: block; width: 107px; height: 81px;}
+.headiconadmin a:hover { background: transparent url("../images/ks_headia_link.png") no-repeat right 0; }
+

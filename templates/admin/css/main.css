@@ -1,0 +1,85 @@
+/*author: Rumin Sergey*/
+/*Copyright: CENTROARTS.com*/
+/*e-mail: info@centroarts.com, centroarts@mail.ru*/
+/*URL: http://www.centroarts.com*/
+
+a { color: #3a94d4; text-decoration: none; outline:none;}
+a:hover { text-decoration: underline; }
+/*h1-h6*/
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input {margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, table, font {font-size: 1em; font-style: normal; font-weight: normal;}
+/*H1-H6*/
+h1, h2, h3, h4, h5, h6 {font-family: Tahoma, Verdana, Helvetica, sans-serif; margin: 0 0 0.2em 0; line-height: 1.1em; font-weight: bold;}
+/*forms*/
+input, textarea, select {font-size: 1.1em; font-family: Tahoma, Helvetica, sans-serif;}
+body {color: #5c5c5c; background-color: #FFFFFF; font-family: Tahoma, Arial, Verdana, sans-serif; font-size: 11px; font-size-adjust: none; font-stretch: normal; font-style: normal; font-variant: normal; font-weight: normal; line-height: 18px;}
+/*НАСТРОЙКА ФОНА*/
+.page_bg {text-align: center; background-color: #f5f5f5;}
+/*Other*/
+p { margin-bottom: 18px; }
+.clr { clear: both; }
+img  { border:0 none; }
+img.left { float: left; margin: 2px 20px 16px 0; }
+img.right { float: right; margin: 2px 0 16px 20px; }
+hr    { border: none; border-top: 1px solid #cfcfcf; }
+strong { font-weight: bold; }
+table {border-collapse: collapse; border-spacing: 0; border: 0px;}
+th {text-align: center;}
+/*UL, LI*/
+ul {margin: 2px 0; padding: 0 0 0 5px;}
+ul li {margin: 5px 0; padding: 0px 0 0px 14px; list-style-type: none;}
+ol {list-style-image: none; list-style-position: outside; list-style-type: decimal; margin-bottom: 18px; margin-left: 2.2em;}
+/*===== ОБЩЕЕ ОФОРМЛЕНИЕ =====*/
+/*ОСНОВНОЙ БЛОК ШАБЛОНА*/
+.wrapper {margin: auto; width: 990px; text-align: left; padding-top: 15px;}
+.kasseler-cms {    float: left; position: relative; top: 8px; } /*НАСТРОЙКА ЛОГОТИПА*/
+/*dleft, dright*/
+.dleft, .dright { background-position: left; background-repeat: repeat-y; background-color: transparent; }
+.dright { background-position: right; }
+/*toptop - Настройка верхней полосы над шапкой*/
+#toptop, #toptop .dleft, #toptop .dright { height: 38px; } /*Высота*/
+#toptop { background: #666666 url("../images/ks_headtop.png") repeat-x -2px 0; }
+#toptop .dright { padding-right: 23px; background: transparent url("../images/ks_headtop_rl.png") repeat-y right -143px; }
+#toptop .dleft { padding-left: 33px; background: transparent url("../images/ks_headtop_rl.png") repeat-y left 0; }
+/*tophead  - Настройка шапки где расположен логотип*/
+#tophead, #tophead .dleft, #tophead .dright { height: 105px; } /*Высота*/
+#tophead { background: #f8f8f8 url("../images/ks_headtop.png") repeat-x -2px -38px; position: relative; }
+#tophead .dright { padding-right: 23px; background: transparent url("../images/ks_headtop_rl.png") repeat-y right -181px; }
+#tophead .dleft { padding-left: 32px; background: transparent url("../images/ks_headtop_rl.png") repeat-y left -38px; }
+/*menuhead - Настройка верхнего меню СТРОКА 1*/
+#menuhead, #menuhead .dleft, #menuhead .dright { height: 35px; }
+#menuhead { background: #444444 url("../images/menuhead.png") repeat-x left -70px; }
+#menuhead .dright { padding-right: 12px; background: transparent url("../images/menuhead.png") repeat-y right -35px; }
+#menuhead .dleft { padding-left: 14px; background: transparent url("../images/menuhead.png") repeat-y left 0; }
+/*menuhead - Настройка верхнего меню СТРОКА 2*/
+#menuheadline { background: #1d83cd url("../images/menuhead.png") repeat-x left -105px; }
+#menuheadline .dright { padding: 4px 0 8px 0; padding-right: 12px; background: transparent url("../images/menuhead.png") repeat-y right -35px; }
+#menuheadline .dleft { padding-left: 14px; background: transparent url("../images/menuhead.png") repeat-y left 0; }
+#menuheadline .dinner { background: transparent url("../images/menuhead_dinner.png") repeat-x left bottom; }
+/*bodypage - основной блок содержимого*/
+#bodypage, #bodypage .dleft, #bodypage .dright { height: auto; }
+#bodypage { background: #ffffff url(../images/bodypage_bg.png) repeat-x left top; }
+#bodypage .dright { padding-right: 13px; background: transparent url("../images/bodypage_right.png") repeat-y right top; }
+#bodypage .dleft { padding-left: 15px; background: transparent url("../images/bodypage_left.png") repeat-y left top; }
+/*container - содержательная центральная часть*/
+.container { padding-top: 8px; }
+/*leftcol - левая колонка для блоков*/
+#leftcol {float: left; width: 212px; height: auto;}
+/*maincol - центральная колонка для основного содержания*/
+#maincol {float: right; width: 742px; height: auto;}
+/*footer - нижняя часть*/
+#footer, #footer .dleft, #footer .dright { height: 39px; } /*Высота*/
+#footer { background: #4991c3 url("../images/ks_footer.png") repeat -3px 0; }
+#footer .dright { padding-right: 23px; background: transparent url("../images/ks_footer_rl.png") repeat-y right -39px; }
+#footer .dleft { padding-left: 33px; background: transparent url("../images/ks_footer_rl.png") repeat-y left 0; }
+/*ПРОСМОТР САЙТА*/
+.viewsite {text-transform: uppercase; font-size: 0.9em; color: #ffffff; padding-top: 6px;}
+/*НОВАЯ ВЕРСИЯ*/
+.newversion {text-transform: uppercase; font-size: 0.9em; color: #ffffff; padding-top: 6px; float: right; display: inline;}
+.newversion img { float: left; margin-top: 5px; }
+.viewsite a, .newversion a { color: #ffffff; }
+/*copyright - Копирайты*/
+.copyright {float: left; color: #ffffff; font-size: 0.9em; padding-top: 12px; text-transform: uppercase;}
+.copyright a { color: #ffffff; }
+/*infoicon - Информационная иконка (i)*/
+.infoicon {float: right; color: #a3a3a3; font-size: 10px; padding-top: 16px;}

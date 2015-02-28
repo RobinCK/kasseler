@@ -1,0 +1,75 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {  margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }                  
+article, aside, figure, footer, header, 
+hgroup, nav, section { display:block; }
+nav ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; }
+a { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+table { border-collapse:collapse; border-spacing:0; }
+input, select { vertical-align:middle; }
+/* END RESET CSS */
+body { font: 10px/1.22 Helvetica, Arial, sans-serif; text-align: center; color: #444444; background: #bcbcbc; background: #bcbcbc -webkit-linear-gradient(#eee, #d6d6d6 17%, #aaa 67%, #aaa) no-repeat fixed; background: -moz-linear-gradient(-90deg, #eee, #d6d6d6 17%, #aaa 67%, #aaa) no-repeat fixed; background: linear-gradient(-90deg, #eee, #d6d6d6 17%, #aaa 67%, #aaa) no-repeat fixed; -webkit-background-size: 100% 1451px; -moz-background-size: 100% 1451px; background-size: 100% 1451px; margin-top:1px; position: relative; top: -1px; }
+
+
+table { font-size:inherit; font:100%; }
+select, input, textarea { font:99% Arial, Helvetica, "Nimbus Sans L", "Bitstream Vera Sans", sans-serif; }
+code, pre { font-family: "Courier New", monospace, serif; font-size: 1em; }
+body, select, input, textarea { color:#444; }
+h1,h2,h3,h4,h5,h6 { font-weight: bold; text-rendering: optimizeLegibility; }
+html { -webkit-font-smoothing: antialiased; }
+a, a:active, a:visited { text-decoration: none; }
+a:hover { text-decoration: underline;  }
+a:active { outline: none; }
+a:focus { outline: thin dotted; }
+ul { margin-left:30px; }
+ol { margin-left:30px; list-style-type: decimal; }
+small { font-size:85%; }
+strong, th { font-weight: bold; }
+td, td img { vertical-align:top; } 
+sub { vertical-align: sub; font-size: smaller; }
+sup { vertical-align: super; font-size: smaller; }
+pre { padding: 15px; white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word; }
+input[type="radio"] { vertical-align: text-bottom; }
+input[type="checkbox"] { vertical-align: bottom; *vertical-align: baseline; }
+.ie6 input { vertical-align: text-bottom; }
+label, input[type=button], input[type=submit], button { cursor: pointer; }
+
+::-moz-selection{ background: #FCECA4; color:#3C352C; text-shadow: none; }
+::selection { background:#FCECA4; color:#3C352C; text-shadow: none; } 
+
+a:link { -webkit-tap-highlight-color: #FCECA4; } 
+html { overflow-y: scroll; }
+button {  width: auto; overflow: visible; }
+
+a { color:#4fa0d9; text-decoration: none; }
+a:hover { color:#4fa0d9; }
+
+/* New Clearfix */
+.clearfix:after               { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix              { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix  { zoom: 1; } /* IE7 */
+
+.centered {position: fixed; top: 50%; left: 50%; margin-top: -175px; margin-left: -230px;}
+#mini_inner { background-color:#fff;width:360px;padding: 50px; height:250px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5); -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);z-index:1;}
+#mini_inner .instant {height:55px;width:200px;margin-left:auto;margin-right:auto;}
+#mini_inner h1 {font-size:20px;color:#888;margin-top:30px;margin-bottom:30px;}
+#mini_inner p {font-size:14px;color:#888;text-align:left;line-height:1.4em;}
+#mini_inner .close {font-size:12px; position:absolute;right:15px;bottom:15px;}
+.bottom {position:fixed; top: 50%; left: 50%; margin-top:175px;margin-left:-220px;}
+.bottom .mini_logo { height: 42px; width: 100px; background: url(../images/error/logo.png) center center; display: block; overflow: hidden;text-indent: -999px;}

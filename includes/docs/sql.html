@@ -1,0 +1,537 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <title>Help SQL</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style type="text/css">
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, b, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+        font-family: "Helvetica";
+        color: #444;
+    }
+    ol, ul {list-style: none;}
+    blockquote, q {quotes: none;}
+    blockquote:before, blockquote:after,
+    q:before, q:after {content: ''; content: none;}
+    table {border-collapse: collapse; border-spacing: 0;}
+    th var {width: 100%; display: block; text-align: center;}
+    body{
+        background: #eeeeee;
+        background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#eeeeee));
+        background: -webkit-linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+        background: -o-linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+        background: -ms-linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+        background: linear-gradient(top, #eeeeee 0%,#eeeeee 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 );
+    }
+    .content {
+        width: 800px; 
+        margin: 0 auto;
+        border: #eeeeee;
+        background: #fff;
+        padding: 5px;;
+    }
+    .content table {
+        border-collapse: collapse; border-spacing: 1;
+        border: 1px #eeeeee solid;
+    }
+    .content td{
+        padding: 5px;
+    }
+    thead th {
+        background: #D16964;
+        color: #fff;
+        padding: 8px;
+    }
+    th {
+        font-weight: bold;
+    }
+    a {color: #ff3019; text-decoration: none;}
+    .row1 {background: #f5f5f5;}
+    .row2 {background: #fafafa;}
+    b {font-weight: bold;}
+  </style>
+</head>
+
+<body>
+<script type="text/javascript" src='../javascript/jquery/jquery.js'></script>
+<div class='content'>
+<table style="width: 100%" border="0" cellspacing="0" cellpadding="0" class='querytable'>
+    <thead>
+        <tr>
+            <th colspan='2'>
+                Запросы
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class='row1'>
+            <td>SELECT * FROM tablename</td>
+            <td># Returns all columns</td>
+        </tr>
+        <tr class='row2'>
+            <td>SELECT column FROM tablename</td>
+            <td># Returns specific column</td>
+        </tr>
+        <tr class='row1'>
+            <td>SELECT COUNT(*) FROM tablename&nbsp;</td>
+            <td># Returns number of rows</td>
+        </tr>
+        <tr class='row2'>
+            <td>SELECT SUM(column) FROM tablename</td>
+            <td># Returns sum of column</td>
+        </tr>
+        <tr class='row1'>
+            <td>SELECT DISTINCT column FROM tablename</td>
+            <td># Returns unique values of column</td>
+        </tr>
+        <tr class='row2'>
+            <td>SELECT * FROM tablename WHERE condition</td>
+            <td># Returns rows that match condition</td>
+        </tr>
+        <tr class='row1'>
+            <td>SELECT * FROM tablename WHERE BINARY condition</td>
+            <td># Condition is case-sensitive</td>
+        </tr>
+        <tr class='row2'>
+            <td>SELECT * FROM t1 INNER JOIN t2 on t1.id = t2.id</td>
+            <td># Join two tables, return all columns</td>
+        </tr>
+        <tr class='row1'>
+            <td>SELECT t1.* FROM t1 INNER JOIN t2 on t1.id = t2.id</td>
+            <td># Only return columns from table1</td>
+        </tr>
+        <tr class='row2'>
+            <td>SELECT LAST_INSERT_ID() as new_id</td>
+            <td># Returns ID of last created row</td>
+        </tr>
+        <tr class='row1'>
+            <td>SELECT max(column) AS alias</td>
+            <td># Return maxium value in column as&nbsp; "alias"</td>
+        </tr>
+        <tr class='row2'>
+            <td>SELECT * FROM table ORDER BY column</td>
+            <td># Return all rows ordering by column</td>
+        </tr>
+        <tr class='row1'>
+            <td>SELECT * FROM table LIMIT 10, 20</td>
+            <td># Return first 20 rows after row 10</td>
+        </tr>
+        <tr class='row2'>
+            <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td colspan="2">UPDATE table_name SET column1=value, column2=value2,&hellip; WHERE some_column=some_value</td>
+        </tr>
+        <tr class='row2'>
+            <td colspan="2">INSERT INTO table_name VALUES (value1, value2, value3,...)</td>
+        </tr>
+        <tr class='row1'>
+            <td colspan="2">INSERT INTO table_name (column1, column2, column3,...) VALUES (value1, value2, value3,...)</td>
+        </tr>
+        <tr class='row2'>
+            <td colspan="2">DELETE FROM table_name WHERE some_column=some_value</td>
+        </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+    $('.querytable td').each(function(){
+        console.log($(this).text());
+        $(this).html(
+            $(this).html().
+            replace('UPDATE', "<b>UPDATE</b>").
+            replace('INTO', "<b>INTO</b>").
+            replace('INSERT ', "<b>INSERT </b>").
+            replace('SELECT', "<b>SELECT</b>").
+            replace('DELETE', "<b>DELETE</b>").
+            replace('INNER JOIN', "<b>INNER JOIN</b>").
+            replace('LEFT JOIN', "<b>LEFT JOIN</b>").
+            replace('ORDER BY', "<b>ORDER BY</b>").
+            replace('SET', "<b>SET</b>").
+            replace('VALUES', "<b>VALUES</b>").
+            replace('WHERE', "<b>WHERE</b>").
+            replace('FROM', "<b>FROM</b>").
+            replace('DISTINCT', "<b>DISTINCT</b>").
+            replace('SUM', "<b>SUM</b>").
+            replace('COUNT', "<b>COUNT</b>").
+            replace('LIMIT', "<b>LIMIT</b>")
+        );
+    })
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class='datatype'>
+    <thead>
+        <tr>
+            <th colspan='4'>
+                Типы данных
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class='row1'>
+            <td>CHAR</td>
+            <td>String, length 0 - 255</td>
+            <td>VARCHAR</td>
+            <td>String, length 0 - 255</td>
+        </tr>
+        <tr class='row2'>
+            <td>TINYTEXT</td>
+            <td>String, length 0 - 255</td>
+            <td>TEXT</td>
+            <td>String, length 0 - 65535</td>
+        </tr>
+        <tr class='row1'>
+            <td>BLOB</td>
+            <td>String, length 0 - 65535</td>
+            <td>MEDIUMTEXT</td>
+            <td>String, length 0 - 16777215</td>
+        </tr>
+        <tr class='row2'>
+            <td>MEDIUMBLOB</td>
+            <td>String, length 0 - 16777215</td>
+            <td>LONGTEXT</td>
+            <td>String, length 0 - 4294967295</td>
+        </tr>
+        <tr class='row1'>
+            <td>LONGBLOB</td>
+            <td>String, length 0 - 4294967295</td>
+            <td>TINYINT</td>
+            <td>Integer, -128 to 127</td>
+        </tr>
+        <tr class='row2'>
+            <td>SMALLINT</td>
+            <td>Integer, -32768 to 32767</td>
+            <td>MEDIUMINT</td>
+            <td>Integer, -8388608 to 8388607</td>
+        </tr>
+        <tr class='row1'>
+            <td>INT</td>
+            <td>Integer, -2147483648 to 2147483647</td>
+            <td>BIGINT</td>
+            <td>Int, -9223372036854775808</td>
+        </tr>
+        <tr class='row2'>
+            <td>FLOAT</td>
+            <td>to 9223372036854775807 Decimal </td>
+            <td>DOUBLE</td>
+            <td>Decimal (24 to 53 digits)</td>
+        </tr>
+        <tr class='row1'>
+            <td>DECIMAL</td>
+            <td>DOUBLE stored as string</td>
+            <td>DATE</td>
+            <td>YYYY-MM-DD</td>
+        </tr>
+        <tr class='row2'>
+            <td>DATETIME</td>
+            <td>YYYY-MM-DD HH:MM:SS</td>
+            <td>TIMESTAMP</td>
+            <td>YYYYMMDDHHMMSS</td>
+        </tr>
+        <tr class='row1'>
+            <td>TIME</td>
+            <td>HH:MM:SS</td>
+            <td>ENUM</td>
+            <td>One of preset options</td>
+        </tr>
+        <tr class='row2'>
+            <td>SET</td>
+            <td>Selection of preset options</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+$('.datatype tr').each(function(){
+    i = 1;
+    $(this).find('td').each(function(){
+        if(i==1 || i ==3) $(this).css('font-weight', 'bold');
+        i++;
+    });
+});
+</script>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+            <th colspan='5'>
+                Функции
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class='row1'>
+            <th>String</th>
+            <th>Date and Time</th>
+            <th>Comparison</th>
+            <th>Mathematical</th>
+            <th>Group</th>
+        </tr>
+        <tr class='row2'>
+            <td>ASCII</td>
+            <td>DAYOFWEEK</td>
+            <td>STRCMP</td>
+            <td>ABS</td>
+            <td>COUNT</td>
+        </tr>
+        <tr class='row1'>
+            <td>ORD</td>
+            <td>WEEKDAY</td>
+            <th>Cast</th>
+            <td>SIGN</td>
+            <td>AVG</td>
+        </tr>
+        <tr class='row2'>
+            <td>CONV</td>
+            <td>DAYOFMONTH</td>
+            <td>CAST</td>
+            <td>MOD</td>
+            <td>MIN</td>
+        </tr>
+        <tr class='row1'>
+            <td>BIN,OCT,HEX</td>
+            <td>DAYOFYEAR</td>
+            <td>CONVERT</td>
+            <td>FLOOR</td>
+            <td>MAX</td>
+        </tr>
+        <tr class='row2'>
+            <td>CHAR</td>
+            <td>MONTH</td>
+            <th>Other</th>
+            <td>CEILING</td>
+            <td>SUM</td>
+        </tr>
+        <tr class='row1'>
+            <td>CONCAT</td>
+            <td>DAYNAME</td>
+            <td>BIT_COUNT</td>
+            <td>ROUND</td>
+            <td>GROUP_CONCAT</td>
+        </tr>
+        <tr class='row2'>
+            <td>CONCAT_WS</td>
+            <td>MONTHNAME</td>
+            <td>DATABASE</td>
+            <td>DIV</td>
+            <td>VARIANCE</td>
+        </tr>
+        <tr class='row1'>
+            <td>LENGTH</td>
+            <td>QUARTER</td>
+            <td>USER</td>
+            <td>EXP</td>
+            <td>STD</td>
+        </tr>
+        <tr class='row2'>
+            <td>CHAR_LENGTH</td>
+            <td>WEEK</td>
+            <td>SYSTEM_USER</td>
+            <td>LN</td>
+            <td>STDDEV</td>
+        </tr>
+        <tr class='row1'>
+            <td>BIT_LENGTH</td>
+            <td>YEAR</td>
+            <td>SESSION_USER</td>
+            <td>LOG,LOG2,LOG10</td>
+            <td>BIT_OR</td>
+        </tr>
+        <tr class='row2'>
+            <td>LOCATE</td>
+            <td>YEARWEEK</td>
+            <td>CURRENT_USER</td>
+            <td>POW</td>
+            <td>BIT_AND</td>
+        </tr>
+        <tr class='row1'>
+            <td>INSTR</td>
+            <td>HOUR</td>
+            <td>PASSWORD</td>
+            <td>POWER</td>
+            <th>Control Flow</th>
+        </tr>
+        <tr class='row2'>
+            <td>LPAD</td>
+            <td>MINUTE</td>
+            <td>OLD_PASSWORD</td>
+            <td>SQRT</td>
+            <td>IFNULL</td>
+        </tr>
+        <tr class='row1'>
+            <td>RPAD</td>
+            <td>SECOND</td>
+            <td>ENCRYPT</td>
+            <td>PI</td>
+            <td>NULLIF</td>
+        </tr>
+        <tr class='row2'>
+            <td>LEFT</td>
+            <td>PERIOD_ADD</td>
+            <td>DECODE</td>
+            <td>COS</td>
+            <td>IF</td>
+        </tr>
+        <tr class='row1'>
+            <td>RIGHT</td>
+            <td>PERIOD_DIFF</td>
+            <td>MD5</td>
+            <td>SIN</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>SUBSTRING</td>
+            <td>DATE_ADD</td>
+            <td>SHA1</td>
+            <td>TAN</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>MID</td>
+            <td>DATE_SUB</td>
+            <td>AES_ENCRYPT</td>
+            <td>ACOS</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>SUBSTRING_INDEX</td>
+            <td>ADDDATE</td>
+            <td>AES_DECRYPT</td>
+            <td>ASIN</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>LTRIM</td>
+            <td>SUBDATE</td>
+            <td>DES_ENCRYPT</td>
+            <td>ATAN, ATAN2</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>RTRIM</td>
+            <td>EXTRACT</td>
+            <td>DES_DECRYPT</td>
+            <td>COT</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>TRIM</td>
+            <td>TO_DAYS</td>
+            <td>LAST_INSERT_ID</td>
+            <td>RAND</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>SOUNDEX</td>
+            <td>FROM_DAYS</td>
+            <td>FORMAT</td>
+            <td>LEAST</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>SPACE</td>
+            <td>DATE_FORMAT</td>
+            <td>VERSION</td>
+            <td>GREATEST</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>REPLACE</td>
+            <td>TIME_FORMAT</td>
+            <td>CONNECTION_ID</td>
+            <td>DEGREES</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>REPEAT</td>
+            <td>CURRENT_DATE</td>
+            <td>GET_LOCK</td>
+            <td>RADIANS</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>REVERSE</td>
+            <td>CURRENT_TIME</td>
+            <td>RELEASE_LOCK</td>
+            <td>TRUNCATE</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>INSERT</td>
+            <td>NOW</td>
+            <td>IS_FREE_LOCK</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>ELT</td>
+            <td>SYSDATE</td>
+            <td>BENCHMARK</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>FIELD</td>
+            <td>UNIX_TIMESTAMP</td>
+            <td>INET_NTOA</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>LCASE</td>
+            <td>FROM_UNIXTIME</td>
+            <td>INET_ATON</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>UCASE</td>
+            <td>SEC_TO_TIME</td>
+            <td>FOUND_ROWS</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row2'>
+            <td>LOAD_FILE</td>
+            <td>TIME_TO_SEC</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr class='row1'>
+            <td>QUOTE</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

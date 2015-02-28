@@ -1,0 +1,10 @@
+/*SWFUPLOAD*/
+#Buttons {padding: 0; position: relative; color: #666666; text-align: right; margin-bottom: 3px;}
+#UploadResult{padding: 0 10px;}
+input#AddPhotos {}
+#UploadPhotos {}
+#Buttons span {}
+#Buttons input, .niceButton {border-style: none; border-color: inherit; border-width: 0; background: url('images/btn.png') no-repeat 0 -32px; color: #666666; font-size: 14px; height: 32px; width: 115px; cursor: pointer; outline: none; text-decoration: none;}
+#Buttons input:hover, #Buttons input.hover, .niceButton:hover {background-position: 0 0; color: #333; outline: 0 none;}
+#Buttons object {outline: none; position: absolute;}
+input#Progress{background: url('images/progress.png') no-repeat 0 0px; width: 115px; height: 32px; position: absolute; width: 0; padding: 0;}

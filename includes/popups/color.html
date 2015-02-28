@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
+<html>
+<head>  
+  <title>Color Picker</title>
+  <meta name="generator" content="HTML Tidy for Windows (vers 14 February 2006), see www.w3.org" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+  <style type="text/css">
+      #plugin{display: none;} #mini {display: none;}#plugin {BACKGROUND: #ffffff; COLOR: #AAA; CURSOR: move; FONT-FAMILY: arial; FONT-SIZE: 11px; PADDING: 7px 10px 11px 10px; _PADDING-RIGHT: 0; Z-INDEX: 1; POSITION: absolute; WIDTH: 199px; _width: 210px; _padding-right: 0px;}
+        #plugin br {CLEAR: both; MARGIN: 0; PADDING: 0;}
+        #plugin select {BORDER: 1px solid #333; BACKGROUND: #FFF; POSITION: relative; TOP: 4px;}
+        #plugHEX {FLOAT: left; position: relative; top: -1px;}
+        #plugCLOSE {FLOAT: right; cursor: pointer; MARGIN: 0 8px 3px; _MARGIN-RIGHT: 10px; COLOR: #FFF; -moz-user-select: none; -khtml-user-select: none; user-select: none;}
+        #plugHEX:hover,#plugCLOSE:hover {COLOR: #FFD000;}
+        #plugCUR {float: left; width: 10px; height: 10px; font-size: 1px; background: #FFF; margin-right: 3px;}
+        #SV {background: #FF0000 url('../images/other/SatVal.png'); _BACKGROUND: #FF0000; POSITION: relative; CURSOR: crosshair; FLOAT: left; HEIGHT: 166px; WIDTH: 167px; _WIDTH: 166px; MARGIN-RIGHT: 10px; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/other/SatVal.png', sizingMethod='scale'); -moz-user-select: none; -khtml-user-select: none; user-select: none;}
+        #SVslide {BACKGROUND: url('../images/other/slide.gif'); HEIGHT: 9px; WIDTH: 9px; POSITION: absolute; _font-size: 1px; line-height: 1px;}
+        #H {BORDER: 1px solid #FAFAFA; CURSOR: crosshair; FLOAT: left; HEIGHT: 154px; POSITION: relative; WIDTH: 19px; PADDING: 0; TOP: 4px; -moz-user-select: none; -khtml-user-select: none; user-select: none;}
+        #Hslide {BACKGROUND: url('../images/other/slideHue.gif'); HEIGHT: 5px; WIDTH: 33px; POSITION: absolute; _font-size: 1px; line-height: 1px;}
+        #Hmodel {POSITION: relative; TOP: -5px;}
+        #Hmodel div {HEIGHT: 1px; WIDTH: 19px; font-size: 1px; line-height: 1px; MARGIN: 0; PADDING: 0;}
+        .moz{-moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;}
+  </style>
+</head>
+
+<body bgcolor='#ffffff' style="overflow: hidden;">
+  <div id="world">
+    <div class="container">
+      <div style=
+      "left: 201px; top: 152px; display: block; z-index: 15;" id=
+      "plugin">
+        <div style=
+        "background: rgb(255, 0, 0) none repeat scroll 0% 0%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"
+        id="plugCUR"></div>
+
+        <div id="plugHEX">FF0000</div>
+
+        <div style="background-color: rgb(255, 0, 0);" id="SV"
+        onmousedown="HSVslide('SVslide','plugin',event)" title=
+        "Saturation + Value">
+          <div id="SVslide" style="top: -4px; left: 162px;">
+            <br />
+          </div>
+        </div>
+
+        <form id="H" onmousedown=
+        "HSVslide('Hslide','plugin',event)" title="Hue" action='#'
+        method='post' name="H">
+          <div id="Hslide" style="top: -7px; left: -8px;">
+            <br />
+          </div>
+
+          <div id="Hmodel"></div>
+        </form>
+      </div>
+
+      <div id="T"></div>
+    </div>
+
+    <div id="plugID">
+      <span style='display: none;'>&nbsp;</span>
+    </div><script type="text/javascript">
+// <!---
+    //  setTimeout(HSVslide('drag','plugin', event), 10);
+    function $(A,B){return((typeof(B)=="object"?B:document).getElementById(A))}function $S(A){A=$(A);if(A){return(A.style)}}function abPos(B){var B=(typeof(B)=="object"?B:$(B)),A={X:0,Y:0};while(B!=null){A.X+=B.offsetLeft;A.Y+=B.offsetTop;B=B.offsetParent}return(A)}function agent(A){return(Math.max(navigator.userAgent.toLowerCase().indexOf(A),0))}function toggle(A){$S(A).display=($S(A).display=="none"?"block":"none")}function within(B,A,C){return((B>=A&&B<=C)?true:false)}function XY(B,A){var C=agent("msie")?{X:event.clientX+document.documentElement.scrollLeft,Y:event.clientY+document.documentElement.scrollTop}:{X:B.pageX,Y:B.pageY};return(A?C[A]:C)}function zero(A){A=parseInt(A);return(!isNaN(A)?A:0)}var maxValue={H:360,S:100,V:100},HSV={H:360,S:100,V:100};var slideHSV={H:360,S:100,V:100},zINDEX=15,stop=1;function HSVslide(K,B,J){function M(R){N=XY(R).Y-P.Y;O=XY(R).X-P.X}function L(S,R,T){return(Math.min(S,Math.max(0,Math.ceil((parseInt(T)/R)*S))))}function G(S,R){if(within(S,0,R)){return(S)}else{if(S>R){return(R)}else{if(S<0){return("-"+H)}}}}function D(U){if(!stop){if(K!="drag"){M(U)}if(K=="SVslide"){C.left=G(O-H,162)+"px";C.top=G(N-H,162)+"px";slideHSV.S=L(100,162,C.left);slideHSV.V=100-L(100,162,C.top);HSVupdate()}else{if(K=="Hslide"){var R=G(N-H,163),T=["H","S","V"],V={};C.top=(R-5)+"px";slideHSV.H=L(360,163,R);for(var S in T){S=T[S];V[S]=(S=="H")?maxValue[S]-L(maxValue[S],163,R):HSV[S]}HSVupdate(V);$S("SV").backgroundColor="#"+color.HSV_HEX({H:HSV.H,S:100,V:100})}else{if(K=="drag"){C.left=XY(U).X+I-A+"px";C.top=XY(U).Y+E-Q+"px"}}}}}if(stop){stop="";var C=$S(K!="drag"?K:B);if(K=="drag"){var I=parseInt(C.left),E=parseInt(C.top),A=XY(J).X,Q=XY(J).Y;$S(B).zIndex=zINDEX++}else{var P=abPos($(B)),O,N,H=(K=="Hslide")?2:4;P.X+=10;P.Y+=22;if(K=="SVslide"){slideHSV.H=HSV.H}}document.onmousemove=D;document.onmouseup=function(){stop=1;document.onmousemove="";document.onmouseup=""};D(J)}}function HSVupdate(A){A=color.HSV_HEX(HSV=A?A:slideHSV);$("plugHEX").innerHTML=A;$S("plugCUR").background="#"+A;$S("plugID").background="#"+A;return(A)}function loadSV(){var B="";for(var A=165;A>=0;A--){B+='<div style="BACKGROUND: #'+color.HSV_HEX({H:Math.round((360/165)*A),S:100,V:100})+';"><br /><\/div>'}$("Hmodel").innerHTML=B}color={};color.cords=function(B){var C=B/2,A=(hsv.H/360)*(Math.PI*2),D=(hsv.S+(100-hsv.V))/100*(C/2);$S("mCur").left=Math.round(Math.abs(Math.round(Math.sin(A)*D)+C+3))+"px";$S("mCur").top=Math.round(Math.abs(Math.round(Math.cos(A)*D)-C-21))+"px"};color.HEX=function(A){A=Math.round(Math.min(Math.max(0,A),255));return("0123456789ABCDEF".charAt((A-A%16)/16)+"0123456789ABCDEF".charAt(A%16))};color.RGB_HEX=function(B){var A=color.HEX;return(A(B.R)+A(B.G)+A(B.B))};color.HSV_RGB=function(I){var M,O,J,E,D,L=I.S/100,K=I.V/100,N=I.H/360;if(L>0){if(N>=1){N=0}N=6*N;F=N-Math.floor(N);J=Math.round(255*K*(1-L));E=Math.round(255*K*(1-(L*F)));D=Math.round(255*K*(1-(L*(1-F))));K=Math.round(255*K);switch(Math.floor(N)){case 0:M=K;O=D;E=J;break;case 1:M=E;O=K;E=J;break;case 2:M=J;O=K;E=D;break;case 3:M=J;O=E;E=K;break;case 4:M=D;O=J;E=K;break;case 5:M=K;O=J;E=E;break}return({R:M?M:0,G:O?O:0,B:E?E:0,A:1})}else{return({R:(K=Math.round(K*255)),G:K,B:K,A:1})}};color.HSV_HEX=function(A){return(color.RGB_HEX(color.HSV_RGB(A)))};$S("plugin").left="0px";$S("plugin").top="0px";$S("plugin").display="block";loadSV();
+    // -->
+    </script>
+  </div>
+</body>
+</html>

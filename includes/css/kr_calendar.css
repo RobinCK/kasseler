@@ -1,0 +1,18 @@
+.cal_conteiner {position: absolute; z-index: 50; background-color: #ffffff; filter:alpha(opacity=95, finishOpacity=95, style=0); opacity: .95; font-size: 10px; font-family: tahoma, sans-serif; padding: 5px; display: none; border: 1px #999999 solid; border-bottom: 2px #999999 solid; border-right: 2px #999999 solid;  color: #888888; text-decoration: none;}
+.cal_conteiner tr td.cellspase{color: #999999; border: 1px #DDDDDD solid; background: #FFFFFF;}
+.cal_conteiner tr td.cell{color: #999999; border: 1px #DDDDDD solid; background: #FAFAFA; cursor:pointer;}
+.cal_conteiner tr td.cell:hover {color: #999999; background: #EEEEEE;}
+.cal_conteiner tr td.sa{color: #999999; border: 1px #DDDDDD solid; background: #F2F9FF; cursor:pointer;}
+.cal_conteiner tr td.sa:hover {color: #999999;  background: #DDEEFF;}
+.cal_conteiner tr td.su{color: #999999; border: 1px #DDDDDD solid; background: #FEF4F3; cursor:pointer;}
+.cal_conteiner tr td.su:hover {color: #999999; background: #FCE0DC;}
+.cal_conteiner tr td.thisdate {font-weight: bold; color: #FFFFFF; border: 1px #DDDDDD solid; background: #9ABE94; cursor:pointer;}
+.cal_conteiner tr td.thisdate:hover {font-weight: bold; color: #FFFFFF; background: #78A86F;}
+.kr_time {border: 2px solid #DDDDDD;-moz-border-radius:3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 3px;background-color: #EEEEEE;}
+.kr_time a{cursor:pointer; font-weight: bold; text-decoration: none; border: 1px solid #CCCCCC; -moz-border-radius:3px; -webkit-border-radius: 3px; border-radius: 3px; padding: 4px;background-color: #F6F6F6;}
+.kr_hour{width:2.4em; height:2.1em; float:left;}
+.b{font-weight: bold;}
+.kr_hour_table{float: left; margin:0px 5px 2px 2px;}
+.kr_minute_table{float: right;  margin:0px 2px 2px 2px;}
+.kr_time .head{color:white;margin: 2px; border: 1px solid #E78F08; -moz-border-radius:3px; -webkit-border-radius: 3px; border-radius: 3px; background-color: #FFBC79;}
+.kr_time .select{border-color:rgba(255,128,0, 0.8);-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,128,0,.6);-moz-box-shadow:inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,128,0,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255,128,0,.6);}

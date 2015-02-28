@@ -1,0 +1,43 @@
+a { color: #3a94d4; text-decoration: none; outline:none;}
+a:hover { text-decoration: underline; }
+/*h1-h6*/
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, fieldset, input {margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, table, font {font-size: 1em; font-style: normal; font-weight: normal;}
+/*H1-H6*/
+h1, h2, h3, h4, h5, h6 {margin: 0 0 0.2em 0; line-height: 1.1em; font-weight: bold;}
+/*forms*/
+input, textarea, select {font-size: 1.1em; font-family: Tahoma, Helvetica, sans-serif;}
+body {color: #5c5c5c; background-color: #FFFFFF; font-family: Tahoma, Arial, Verdana, sans-serif; font-size: 11px; font-size-adjust: none; font-stretch: normal; font-style: normal; font-variant: normal; font-weight: normal; line-height: 18px;}
+.page_bg {text-align: center; background-color: #f5f5f5;}
+/*Other*/
+p { margin-bottom: 18px; }
+.clr { clear: both; }
+img  { border:0 none; }
+img.left { float: left; margin: 2px 20px 16px 0; }
+img.right { float: right; margin: 2px 0 16px 20px; }
+hr    { border: none; border-top: 1px solid #cfcfcf; }
+strong { font-weight: bold; }
+table {border-collapse: collapse; border-spacing: 0; border: 0px;}
+th {text-align: center;}
+/*UL, LI*/
+ul {margin: 2px 0; padding: 0 0 0 5px;}
+ul li {margin: 5px 0; padding: 0px 0 0px 14px; list-style-type: none; background: transparent url("../images/li.gif") no-repeat left 5px;}
+ol {list-style-image: none; list-style-position: outside; list-style-type: decimal; margin-bottom: 18px; margin-left: 2.2em;}
+
+.wraperror {margin: auto; width: 850px; text-align: left; margin-top: 8%;}
+.e_shadow_top, .e_shadow_btm {font-size: 1px; height: 24px; }
+.e_shadow {overflow: hidden; background: transparent url("../images/report/shadow_2.png") repeat-y left top;}
+.e_shadow_top {background: transparent url("../images/report/shadow_1.png") no-repeat left top;}
+.e_shadow_btm {background: transparent url("../images/report/shadow_1.png") no-repeat left bottom;}
+.errorwnd {margin: 0 24px; background-color: #ffffff; }
+.e_heading {background: #fdfdfd url("../images/report/report_bg.png") repeat-x left top; border-bottom: 1px solid #efefef; height: 96px; position: relative;}
+.bline {}
+.e_heading h1 {float: right; font-size: 48px; font-weight: normal; color: #328fd1; position: absolute; top: 35px; right: 20px; text-align: center; font-family: Tahoma, Verdana, Helvetica, sans-serif;}
+.kasselerlogo {position: relative; top: 12px; margin-left: 10px;}
+.e_foot {background: #f9f9f9 url("../images/report/report_bg.png") repeat-x left -98px; height: 37px; overflow: hidden; line-height: 35px; padding-left: 20px; text-transform: uppercase; font-size: 10px;}
+.e_foot .bline {height: 37px; }
+.e_cont {padding: 10px 12px; }
+.e_cont h2 {font-size:16px; font-family:Tahoma; font-weight: bold; color: #328fd1; padding-left: 10px; padding-bottom: 7px}
+.warnmsg {background-color: #f7fbfd; border: 1px solid #d5dadd; padding: 5px 10px; -moz-border-radius-topright:4px; -moz-border-radius-topleft:4px; -moz-border-radius-bottomright:4px; -moz-border-radius-bottomleft:4px; margin-bottom: 10px;}
+.fieldd p {margin: 0; margin-bottom: 5px; }
+.fieldd input, .fieldd textarea {padding: 2px; width: 98%; border: 1px solid #acacac; background: #f8f8f8 url("../images/report/report_bg.png") repeat-x left -136px;}

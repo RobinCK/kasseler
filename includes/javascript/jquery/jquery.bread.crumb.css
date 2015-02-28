@@ -1,0 +1,4 @@
+.srcbreadcumb {overflow:hidden;}
+.srccrumbs {white-space: nowrap; float:left;display:none}
+.srccrumbs a{padding-right:7px;background: transparent url('right-row.png') no-repeat center right;}
+.srccrumbs a:last-child{background:none}

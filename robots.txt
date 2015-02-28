@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /administrator/
+Disallow: /blocks/
+Disallow: /includes/
+Disallow: /modules/
+Disallow: /templates/
+Disallow: /uploads/
+Disallow: /engine.php?do=redirect&url=
+
+
+Sitemap: sitemap.xml

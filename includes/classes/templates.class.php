@@ -83,6 +83,7 @@ class template{
         if(!isset($this->cache[$index])){                                                          //Проверяем наличие шаблона в кэше 
             $path = !empty($path) ? $path : $this->path;
             if(isset($_GET['id']) AND file_exists($path."{$tpl_name}-{$main->module}-{$_GET['id']}.tpl")) $file = "{$tpl_name}-{$main->module}-{$_GET['id']}";
+            elseif(isset($_GET['do']) AND file_exists($path."{$tpl_name}-{$main->module}-{$_GET['do']}.tpl")) $file = "{$tpl_name}-{$main->module}-{$_GET['do']}";
             elseif(isset($_GET['module']) AND file_exists($path."/{$main->module}/{$tpl_name}.tpl")) {$path =$path."/{$main->module}/";  $file = "{$tpl_name}";}
             elseif(isset($_GET['module']) AND file_exists("modules/{$main->module}/template/") AND file_exists("modules/{$main->module}/template/{$tpl_name}.tpl")) {$path = "modules/{$main->module}/template/"; $file = "{$tpl_name}";}
             elseif(file_exists($path."{$tpl_name}-{$main->module}.tpl") AND isset($_GET['module'])) $file = "{$tpl_name}-{$main->module}";

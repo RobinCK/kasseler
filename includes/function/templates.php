@@ -117,9 +117,9 @@ class tpl_create{
            if($config['jquery']!='noload') {
               switch ($config['jquery']){
                  case 'local': $js[] = array('includes/javascript/jquery/jquery.js', true); break;
-                 case 'google': $js[] = array('http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js', true); break;
-                 case 'yandex': $js[] = array('http://yandex.st/jquery/1.7.2/jquery.min.js', true); break;
-                 case 'jquery': $js[] = array('http://code.jquery.com/jquery-1.7.2.min.js', true); break;
+                 case 'google': $js[] = array('http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js', true); break;
+                 case 'yandex': $js[] = array('http://yandex.st/jquery/1.11.2/jquery.min.js', true); break;
+                 case 'jquery': $js[] = array('http://code.jquery.com/jquery-1.11.2.min.js', true); break;
               }                
            }
            $js[] = array('includes/javascript/kr_ajax.js', true);

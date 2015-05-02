@@ -272,7 +272,7 @@ Copyright (c) 2011 by Harvest
 
       $.fn.extend({
             chosen: function(options) {
-               if ($.browser.msie && ($.browser.version === "6.0" || $.browser.version === "7.0")) {
+               if (jQuery.support.boxModel == false) {
                   return this;
                }
                return $(this).each(function(input_field) {

@@ -74,14 +74,14 @@ var jl = window.js_lang;
 
           if($(obj).width()>=390) $_.buttonBars=[["b", "i", "u", "s", "seperator", "left", "center", "right", "justify", "seperator", "font", "size", "seperator", "color", "backcolor", "seperator", "smiles", "img", "link", "spoiler", "preview", "seperator", "translit", "charset", "li", "blockquote", "sub", "sup", "seperator", "code", "cite", "hide", "seperator", "hr"], []];
 
-          if($.browser.msie && obj.style.height) obj.style.height = (parseInt(obj.style.height)-2)+'px';
+          if((navigator.userAgent.search("MSIE") >= 0) == true && obj.style.height) obj.style.height = (parseInt(obj.style.height)-2)+'px';
           r = $_.createBars({id:id, obj:obj, width:parseInt($(obj).width()), height:obj.clientHeight ? obj.clientHeight:obj.offsetHeight});
           //$('head').append("<style type='text/css'>"+$_.style+"</style>");
           ////////////
           var style = document.createElement('style');
           style.type = 'text/css';
           if(style.styleSheet) style.styleSheet.cssText = $_.style;
-          else if ($.browser.mozilla || $.browser.opera) style.innerHTML = $_.style;
+          else if (navigator.userAgent.search("Firefox") >= 0 || navigator.userAgent.search("Opera") >= 0) style.innerHTML = $_.style;
           else style.appendChild(document.createTextNode($_.style));
           document.getElementsByTagName('head')[0].appendChild(style);
           ////////////
@@ -97,9 +97,9 @@ var jl = window.js_lang;
           });
           if($$('resize_'+id)) $$('resize_'+id).onmousedown = function(e){
              var start = $$(id).offsetHeight;
-             ps = ($.browser.mozilla) ? {x:e.pageX, y:e.pageY}:{x:event.clientX, y:event.clientY};
+             ps = (navigator.userAgent.search("Firefox") >= 0) ? {x:e.pageX, y:e.pageY}:{x:event.clientX, y:event.clientY};
              document.onmousemove = function(e){
-                p = ($.browser.mozilla) ? {x:e.pageX, y:e.pageY}:{x:event.clientX, y:event.clientY};
+                p = (navigator.userAgent.search("Firefox") >= 0) ? {x:e.pageX, y:e.pageY}:{x:event.clientX, y:event.clientY};
                 $$(id).style.height = start+(p.y-ps.y)+'px';
                 hack_sel();
              }            

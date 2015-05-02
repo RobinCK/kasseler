@@ -65,9 +65,12 @@ global $hooks, $main, $adminfile;
 }
 
 /**
-* Возвращает информацию из файла плагина
-* 
-*/
+ * Возвращает информацию из файла плагина
+ *
+ * @param $filename
+ *
+ * @return array
+ */
 function file_hook_info($filename){
    global $main, $revision;
    if(hook_check(__FUNCTION__)) return hook();
@@ -112,11 +115,14 @@ function file_hook_info($filename){
 }
 
 /**
-* Добавляет в список плагинов
-* 
-* @param mixed $plagin
-* @param mixed $infoplagin
-*/
+ * Добавляет в список плагинов
+ *
+ * @param mixed  $plagin
+ * @param mixed  $infoplagin
+ * @param string $path
+ *
+ * @return mixed
+ */
 function plagin_append_hooks($plagin, $infoplagin, $path = ""){
    global $main, $hooks;
    if(hook_check(__FUNCTION__)) return hook();

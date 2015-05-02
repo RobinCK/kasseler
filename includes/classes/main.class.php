@@ -532,3 +532,4 @@ class main {
 }
 
 $main = new main();
+?>

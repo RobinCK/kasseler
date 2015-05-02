@@ -136,7 +136,10 @@ class main {
     * @var bool
     */
     public $rewrite_id = true;
-    
+
+    /**
+     * @var bool
+     */
     public $is_moile = false;
     
     /**
@@ -145,6 +148,10 @@ class main {
     * @var array
     */    
     public $hooks = array();
+
+    /**
+     * @var array
+     */
     public $hooks_info = array();
     
     /**
@@ -159,33 +166,70 @@ class main {
     * 
     * @var array
     */
-    public $conf = array();     
-    
-    public $tpl_tag = array();
-    
-    public $css_head_link=array();
-    public $css_head=array();
-    public $js_head_link=array();
-    public $js_head=array();
-    public $script = array();
-    public $link = array();
-    
+    public $conf = array();
+
     /**
-    * Конструктор класса
-    * 
-    * @return void
-    */
+     * @var array
+     */
+    public $tpl_tag = array();
+
+    /**
+     * @var array
+     */
+    public $css_head_link = array();
+
+    /**
+     * @var array
+     */
+    public $css_head = array();
+
+    /**
+     * @var array
+     */
+    public $js_head_link = array();
+
+    /**
+     * @var array
+     */
+    public $js_head = array();
+
+    /**
+     * @var array
+     */
+    public $script = array();
+
+    /**
+     * @var array
+     */
+    public $link = array();
+
+    /**
+     * Конструктор класса
+     */
     public function __construct(){
     global $config;
         if($config['rewrite']==ENABLED) $this->mod_rewrite = true;
     }
-    
+
+    /**
+     * @param $tag
+     * @param $content
+     *
+     * @return mixed
+     */
     public static function add_template_tag($tag, $content){
     global $main;
         if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
         $main->tpl_tag[$tag] = $content; 
     }
-    
+
+    /**
+     * @param      $text
+     * @param bool $link
+     * @param bool $onload
+     *
+     * @return bool|mixed
+     */
     public static function add2script($text, $link=true, $onload=false){
     global $main;
        if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
@@ -199,6 +243,11 @@ class main {
         } else return false;
     }
 
+    /**
+     * @param $url
+     *
+     * @return bool|mixed
+     */
     public static function add2link($url){
     global $main;
         if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
@@ -208,43 +257,62 @@ class main {
             return true;
         } else return false;
     }
-    
+
     /**
-    * Добавляет $css_text в style head страницы
-    * 
-    * @param mixed $css_text
-    */
+     * Добавляет $css_text в style head страницы
+     *
+     * @param mixed $css_text
+     *
+     * @return mixed
+     */
     public static function add_css2head($css_text){
     global $main;
        if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
        $main->css_head[] = $css_text;
     }
-    
+
     /**
-    * Присоеденяет $file в head страницы
-    * 
-    * @param mixed $file
-    */
+     * Присоеденяет $file в head страницы
+     *
+     * @param mixed $file
+     *
+     * @return mixed
+     */
     public static function add_cssfile2head($file){
     global $main;
        if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
        if(!in_array($file, $main->css_head_link)) $main->css_head_link[] = $file;
     }
-    
+
+    /**
+     * @param $js_text
+     *
+     * @return mixed
+     */
     public static function add_javascript2body($js_text){
     global $main;
        if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
        $main->js_head[] = $js_text;
     }
-    
+
+    /**
+     * @param $file
+     *
+     * @return mixed
+     */
     public static function add_javascript_file2body($file){
     global $main;
        if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
        if(!in_array($file, $main->js_head_link)) $main->js_head_link[] = $file;
     }
-    
+
+    /**
+     * @param $functions
+     *
+     * @return mixed
+     */
     public static function add_js_function($functions){
-       global $main;
+    global $main;
        if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
        if(is_array($functions)){
           foreach ($functions as $key => $value) {
@@ -275,33 +343,33 @@ class main {
         $this->agent = &$agentinfo;
         $this->config = &$config;
         $this->points = &$points;
-        $referer=get_env('HTTP_REFERER');
+        $referer = get_env('HTTP_REFERER');
         $this->ref = (isset($referer) ? $referer : "");
         $this->uri = get_env('REQUEST_URI');
         $this->host = get_host_name();
         $this->rewrite_id = (isset($_GET['mod_rewrite']) OR (is_home() AND $config['rewrite']==ENABLED) OR ($config['rewrite']==ENABLED AND defined("ADMIN_FILE"))) ? true : false;
     }
-    
+
     /**
-    * Функция подключения файлов
-    * 
-    * @param mixed $files
-    * @param string $path
-    * @param string $prefix
-    * @param string $context
-    * @param string $eval
-    * @return void
-    */
+     * Функция подключения файлов
+     *
+     * @param mixed  $files
+     * @param string $path
+     * @param string $prefix
+     * @param string $context
+     * @param string $eval
+     * @param string $ext
+     */
     public function require_file(&$files, $path='', $prefix='', $context='', $eval='', $ext='.php'){
     global $lang, $img;
         if(!is_array($files)) $files = array($files);
         foreach($files AS $f) {                                                                                                      //Перебираем параметры и пытаемся подключить
             if(!in_array($prefix.$f, $this->require_files) AND !empty($f)){                                                          //Проверяем подключен ли уже текущий файл
                 //Проверяем наличие хука
-                if(isset($this->conf['hooks']) AND isset($this->conf['hooks'][$path.$f]) AND $this->conf['hooks'][$path.$f]['type']=='file'){
-                    if(file_exists("hooks/".$this->conf['hooks'][$path.$f]['file'])) {                                               //Проверяем наличие файла
-                        require 'hooks/'.$this->conf['hooks'][$path.$f]['file'];                                                     //Подключаем файл
-                        $this->require_files[] = 'hooks/'.$this->conf['hooks'][$path.$f]['file'];                                    //Заносим файл в массив для будущей проверки подключения
+                if(isset($this->conf['hooks']) AND isset($this->conf['hooks'][$path.$f.$ext]) AND $this->conf['hooks'][$path.$f.$ext]['type']=='file'){
+                    if(file_exists("hooks/".$this->conf['hooks'][$path.$f.$ext]['file'])) {                                               //Проверяем наличие файла
+                        require 'hooks/'.$this->conf['hooks'][$path.$f.$ext]['file'];                                                     //Подключаем файл
+                        $this->require_files[] = 'hooks/'.$this->conf['hooks'][$path.$f.$ext]['file'];                                    //Заносим файл в массив для будущей проверки подключения
                         if(!empty($eval)) eval($eval);
                     //В случаи неудачи выводим ошибку
                     } else trigger_error("SYSTEM ERROR: include hook file 'hooks/{$context}{$f}{$ext}' not exists.", E_USER_WARNING);
@@ -315,7 +383,10 @@ class main {
             }
         }
     }
-    
+
+    /**
+     * @param $file
+     */
     public static function required($file){
     global $main;
         $_vars = (!is_array($file)) ? func_get_args() : $file;
@@ -383,13 +454,15 @@ class main {
     }
 
     /**
-    * Функция генерации ссылок
-    * 
-    * @param array $link
-    * @param string $return
-    * @param array $addon дополнительные параметры(jscript линки)
-    * @return string
-    */
+     * Функция генерации ссылок
+     *
+     * @param array  $link
+     * @param string $type_link
+     * @param string $return
+     * @param array  $addon дополнительные параметры(jscript линки)
+     *
+     * @return string
+     */
     public function url($link, $type_link="", $return="",$addon=array()){
     global $config, $languages2code;
         if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
@@ -408,10 +481,16 @@ class main {
         $this->links[] = $return;
         return 'http://'.get_host_name().'/'.$return;
     }
-    
+
     /**
-    * Модификация $this->url для JScript ссылок
-    */
+     * Модификация $this->url для JScript ссылок
+     *
+     * @param        $link
+     * @param string $type_link
+     * @param string $return
+     *
+     * @return mixed
+     */
     public function urljs($link, $type_link="", $return=""){
         if(function_exists('hook_check') AND hook_check(__METHOD__)) return hook();
         $mod = $this->mod_rewrite;
@@ -451,6 +530,5 @@ class main {
         return true;
     }
 }
-$main = new main();
 
-?>
+$main = new main();

@@ -120,7 +120,8 @@ $(document).ready(function(){
     //remove disable rating
     $('.rating').filter('.disable').find('div').remove();
     //user info popup
-    $("a.user_info").live("click", function(event){
+   // $("a.user_info").live("click", function(event){
+     $(document).on("click", "a.user_info", function(event){
         haja({animation: false, action:this.href}, {'show':'json'}, {
             onstartload:function(){KR_AJAX.animation('show');},
             onendload:function(msg){
@@ -147,7 +148,7 @@ $(document).ready(function(){
     });
        
     //chosen setup
-    $("select.chzn-select").live('change', function(){
+     $(document).on("click", "select.chzn-select", function(event){
         setTimeout(function(){
             $('select').trigger("liszt:updated");
         }, 10);
@@ -164,7 +165,7 @@ $(document).ready(function(){
     $.DOMlive.reg("img.lazyload, img.miniature",function(){var a=$(document).scrollTop();$(this).lazyload({placeholder:"includes/javascript/jquery/lazyload/images/pixel.gif",effect:"fadeIn"});$(document).scrollTop(a)})
     
     $.DOMlive.reg('.pixel', function(){
-        if($.browser.msie) $(this).append('<img src="includes/images/pixel.gif" alt="" />');
+        if(jQuery.support.boxModel == false) $(this).append('<img src="includes/images/pixel.gif" alt="" />');
         else $(this).append('<img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="" />');
     });
     
@@ -220,7 +221,7 @@ $(document).ready(function(){
     //Check DOMNodeInserted
     $('<div>').appendTo('body').bind('DOMNodeInserted', function(){$.DOMNodeInserted = true;}).html('test').remove();    
     //Init DOMNodeInserted
-    if($.DOMNodeInserted) $('body').live('DOMNodeInserted', function(event){$.DOMlive.check(event.target);}); else $.getScript('includes/javascript/DOMNodeInserted.js');
+    if($.DOMNodeInserted)  $(document).on("DOMNodeInserted", "body", function(event){$.DOMlive.check(event.target);}); else $.getScript('includes/javascript/DOMNodeInserted.js');
     //First checked KR live
     $.DOMlive.checkAll();
 });

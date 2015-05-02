@@ -4,7 +4,27 @@
 // Copyright (c)2007-2012 by Igor Ognichenko//
 // http://www.kasseler-cms.net/             //
 //////////////////////////////////////////////
-(function($,e,b){var c="hashchange",h=document,f,g=$.event.special,i=h.documentMode,d="on"+c in e&&(i===b||i>7);function a(j){j=j||location.href;return"#"+j.replace(/^[^#]*#?(.*)$/,"$1")}$.fn[c]=function(j){return j?this.bind(c,j):this.trigger(c)};$.fn[c].delay=50;g[c]=$.extend(g[c],{setup:function(){if(d){return false}$(f.start)},teardown:function(){if(d){return false}$(f.stop)}});f=(function(){var j={},p,m=a(),k=function(q){return q},l=k,o=k;j.start=function(){p||n()};j.stop=function(){p&&clearTimeout(p);p=b};function n(){var r=a(),q=o(m);if(r!==m){l(m=r,q);$(e).trigger(c)}else{if(q!==m){location.href=location.href.replace(/#.*/,"")+q}}p=setTimeout(n,$.fn[c].delay)}$.browser.msie&&!d&&(function(){var q,r;j.start=function(){if(!q){r=$.fn[c].src;r=r&&r+a();q=$('<iframe tabindex="-1" title="empty"/>').hide().one("load",function(){r||l(a());n()}).attr("src",r||"javascript:0").insertAfter("body")[0].contentWindow;h.onpropertychange=function(){try{if(event.propertyName==="title"){q.document.title=h.title}}catch(s){}}}};j.stop=k;o=function(){return a(q.location.href)};l=function(v,s){var u=q.document,t=$.fn[c].domain;if(v!==s){u.title=h.title;u.open();t&&u.write('<script>document.domain="'+t+'"<\/script>');u.close();q.location.hash=v}}})();return j})()})(jQuery,this);
+
+(function($,e,b){
+    var c="hashchange",h=document,f,g=$.event.special,i=h.documentMode,d="on"+c in e&&(i===b||i>7);
+  function a(j){j=j||location.href;return"#"+j.replace(/^[^#]*#?(.*)$/,"$1")}
+  $.fn[c]=function(j){return j?this.bind(c,j):this.trigger(c)};
+  $.fn[c].delay=50;
+  g[c]=$.extend(g[c],{setup:function(){if(d){return false}$(f.start)},teardown:function(){if(d){return false}$(f.stop)}});
+  f=(function(){
+    var j={},p,m=a(),k=function(q){return q},l=k,o=k;
+    j.start=function(){p||n()};
+    j.stop=function(){p&&clearTimeout(p);p=b};
+    function n(){var r=a(),q=o(m);if(r!==m){l(m=r,q);$(e).trigger(c)}else{if(q!==m){location.href=location.href.replace(/#.*/,"")+q}}p=setTimeout(n,$.fn[c].delay)}
+    if((navigator.userAgent.search("MSIE") >= 0) == true){(function(){
+      var q,r;
+      j.start=function(){
+        if(!q){r=$.fn[c].src;r=r&&r+a();q=$('<iframe tabindex="-1" title="empty"/>').hide().one("load",function(){r||l(a());n()}).attr("src",r||"javascript:0").insertAfter("body")[0].contentWindow;h.onpropertychange=function(){try{if(event.propertyName==="title"){q.document.title=h.title}}catch(s){}}}};
+        j.stop=k;
+        o=function(){return a(q.location.href)};
+        l=function(v,s){var u=q.document,t=$.fn[c].domain;if(v!==s){u.title=h.title;u.open();t&&u.write('<script>document.domain="'+t+'"<\/script>');u.close();q.location.hash=v}}
+    })(); }
+    return j})()})(jQuery,this);
 
 var j = $ = jQuery.noConflict();
 var ajax_history = {};
@@ -109,7 +129,7 @@ KR_AJAX.extend = function(dest, src, skipexist){var overwrite = !skipexist; for 
     interval:function(){setTimeout(KR_AJAX.interval, 100); for(var i in $_.ifunction) {if($.isFunction($_.ifunction[i])) $_.ifunction[i]();}},
     
     init:function(){
-        if($.browser.msie){try {$_.xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");} catch (e) {try {$_.xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");} catch (err) {$_.xmlhttp = null;}}}
+        if((navigator.userAgent.search("MSIE") >= 0) == true){try {$_.xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");} catch (e) {try {$_.xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");} catch (err) {$_.xmlhttp = null;}}}
         if(!$_.xmlhttp && typeof XMLHttpRequest != "undefined") $_.xmlhttp = new XMLHttpRequest();
         if(!$_.xmlhttp) alert($_.alert);
         else $(document).ready(function(){KR_AJAX.isReady = true; KR_AJAX.onload = true;});

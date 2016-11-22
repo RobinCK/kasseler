@@ -1,0 +1,6 @@
+{
+  "name": "Kasseler CMS",
+  "tagline": "CMS system",
+  "body": "Kasseler CMS 2\r\n=======\r\n### Installation\r\n1. Copy all the files to the root directory of your site.\r\n2. Create a database on your server or hosting.\r\n3. For security purposes, change the default name in the file admin.php and mount a new file name in the file admin.php includes/сonfig/config.php.\r\n4. Run in the address bar of your browser http://www.yoursite.com/install.php.\r\n5. After the successful installation, delete the folder install / install.php file and directory from your site.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

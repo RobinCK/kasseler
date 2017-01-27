@@ -6,3 +6,7 @@ Kasseler CMS 2
 3. For security purposes, change the default name in the file admin.php and mount a new file name in the file admin.php includes/сonfig/config.php.
 4. Run in the address bar of your browser http://www.yoursite.com/install.php.
 5. After the successful installation, delete the folder install / install.php file and directory from your site.
+
+Using [BrowserStack] for Cross-Browser Testing
+
+[BrowserStack]:https://www.browserstack.com/

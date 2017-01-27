@@ -11,4 +11,7 @@ Offsite
 ----
 [Kasseler CMS]
 
+Using [BrowserStack] for Cross-Browser Testing
+
 [Kasseler CMS]:http://www.kasseler-cms.net/
+[BrowserStack]:https://www.browserstack.com/
